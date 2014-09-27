@@ -13,10 +13,9 @@ public class GetHTML {
 		//	Add URL as command line parameter
 		//	Add Log4j
 		
-		String sURL					= "";	// A valid URL
+		String sURL					= "http://www.google.com/";	// A valid URL
 		String sHTTpResponseLine	= "";	// One line from the HTTP response
 		String sHTTpResponseLines	= "";	// Entire HTTP response
-		sURL = "http://www.google.com/";
 		
 		try {
 			URL url = new URL(sURL);

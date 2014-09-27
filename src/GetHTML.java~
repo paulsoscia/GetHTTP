@@ -17,7 +17,7 @@ public class GetHTML {
 		sURL = "http://www.google.com/";
 		
 		try {
-			URL url = new URL(sURL);
+			URL url= new URL(sURL);
 			try {
 				InputStream is = url.openStream();
 				BufferedReader in = new BufferedReader(new InputStreamReader(is));
