@@ -10,8 +10,6 @@ public class GetHTML {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//	Add URL as command line parameter
-		//	Add Log4j
 		
 		String sURL					= "";	// A valid URL
 		String sHTTpResponseLine	= "";	// One line from the HTTP response
