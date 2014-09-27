@@ -18,11 +18,11 @@ public class GetHTML {
 		String sHTTpResponseLines	= "";	// Entire HTTP response
 		
 		try {
-			URL url = new URL(sURL);
+			URL urlSiteToGetHTML = new URL(sURL);
 			try {
-				InputStream is = url.openStream();
-				BufferedReader in = new BufferedReader(new InputStreamReader(is));
-				while ((sHTTpResponseLine = in.readLine()) != null) {
+				InputStream isGetHtmlData = urlSiteToGetHTML.openStream();
+				BufferedReader brGetHtmlData = new BufferedReader(new InputStreamReader(isGetHtmlData));
+				while ((sHTTpResponseLine = brGetHtmlData.readLine()) != null) {
 					sHTTpResponseLines += sHTTpResponseLine;
 				}
 
