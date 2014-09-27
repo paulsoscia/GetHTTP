@@ -16,8 +16,10 @@ public class GetHTML {
 		String sURL					= "http://www.google.com/";	// A valid URL
 		String sHTTpResponseLine	= "";	// One line from the HTTP response
 		String sHTTpResponseLines	= "";	// Entire HTTP response
+		Integer iReturn = 0;
 		
 		try {
+			iReturn = 1;
 			URL urlSiteToGetHTML = new URL(sURL);
 			try {
 				InputStream isGetHtmlData = urlSiteToGetHTML.openStream();
@@ -28,15 +30,22 @@ public class GetHTML {
 
 			} 
 			catch (IOException e) {
-				System.out.println("Error:  Problem with url " + sURL + ". IOException");
+				iReturn = 0;
+				System.out.println("Error:  Problem reading HTML, with url " + sURL + ". IOException");
 			}
 		}
 		catch (MalformedURLException e) {
+			iReturn = 0;
 			System.out.println("Error:  Problem with url " + sURL + ". MalformedURLException");
 		}
-		System.out.println("sURL=" + sURL);
-		System.out.println("success");
-		System.out.println(sHTTpResponseLines);
+		
+		System.out.println("Completed: sURL=" + sURL);
+		if (iReturn == 1)
+		{
+			System.out.println("Completed: HTTP get was successful");
+			System.out.println("Completed: response length=" + sHTTpResponseLines.length());
+			System.out.println("Completed: " + sHTTpResponseLines);
+		}
 
 	} // main end
 
