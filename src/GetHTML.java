@@ -8,12 +8,10 @@ import java.net.URL;
 
 public class GetHTML {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		//	Add URL as command line parameter
-		//	Add Log4j
-		
-		String sURL					= "http://www.google.com/";	// A valid URL
+	String sURL					= "http://www.google.com/";	// A valid URL
+	
+	public GetHTML() {
+
 		String sHTTpResponseLine	= "";	// One line from the HTTP response
 		String sHTTpResponseLines	= "";	// Entire HTTP response
 		Integer iReturn = 0;
@@ -46,6 +44,14 @@ public class GetHTML {
 			System.out.println("Completed: response length=" + sHTTpResponseLines.length());
 			System.out.println("Completed: " + sHTTpResponseLines);
 		}
+				
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//	Add URL as command line parameter
+		//	Add Log4j
+		GetHTML getGooglePage = new GetHTML();
 
 	} // main end
 
