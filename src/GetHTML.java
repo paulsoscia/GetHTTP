@@ -4,17 +4,15 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class GetHTML {
 
-	static String  sURL					= "http://www.yahoo.com/";	// A valid URL
-	
-	public GetHTML() {
-		this(sURL);
-	}
-	
-	public GetHTML(String sLocalURL) {
+	static String  sURL					= "http://www.bing.com/";	// A valid URL
+		
+	public void getHTML(String sLocalURL) {
 
 		String sHTTpResponseLine	= "";	// One line from the HTTP response
 		String sHTTpResponseLines	= "";	// Entire HTTP response
@@ -51,10 +49,22 @@ public class GetHTML {
 				
 	}
 	
-	public static void commandlineParms(String[] args)
+	public static String[] commandlineParms(String[] args)
 	{
+
+	    List<String> listCommandLineParmsTemp = new ArrayList<String>();
+	    for(String arg: args) {
+	        if (!arg.trim().isEmpty()) {
+	        	listCommandLineParmsTemp.add(arg);
+	        }
+	    }
+	    if (args.length == 0) {
+	    	listCommandLineParmsTemp.add(sURL);
+	    }
+	    // nonBlank will have all the elements which contain some characters.
+	    String[] strArrCommandLineParms = (String[]) listCommandLineParmsTemp.toArray( new String[listCommandLineParmsTemp.size()] );
 		
-		for (String sCommandLineParameter: args) {
+		for (String sCommandLineParameter: strArrCommandLineParms) {
 			sCommandLineParameter = sCommandLineParameter.trim().toUpperCase();
 			String sLeftMostCommandLineParameter = sCommandLineParameter.substring(0,3);
 			if (sLeftMostCommandLineParameter.equals("HTT"))
@@ -64,34 +74,40 @@ public class GetHTML {
 			}
 		    switch(sLeftMostCommandLineParameter){
 			    case "-U=": 
-			    	System.out.println("URLs");
+			    	System.out.println("CommandLineParms: URLs");
 			    	break;
 			    case "-I=": 
-			    	System.out.println("Input File");
+			    	System.out.println("CommandLineParms: Input File");
 			    	break;
 			    case "-O=": 
-			    	System.out.println("Input File");
+			    	System.out.println("CommandLineParms: Output File");
+			    	break;
+			    case "-?": 
+			    	System.out.println("CommandLineParms: Help");
+			    	break;
+			    case "-H": 
+			    	System.out.println("CommandLineParms: Help");
+			    	break;
+			    case "-HE": 
+			    	System.out.println("CommandLineParms: Help");
 			    	break;
 			    default :
-			    	System.out.println("Invalid Number of Day");
+			    	System.out.println("CommandLineParms: Invalid Number of Day");
 		     }
 		}
+
+		return (strArrCommandLineParms);
 	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//	Add URL as command line parameter
 		//	Add Log4j
-		commandlineParms(args);
-		if (args.length == 0) {
-			// no/none command line parameters were provided
-			GetHTML getGooglePage = new GetHTML();			
-		}
-		else {
-			// command line parameters were provided
-			for (String sCommandLineParameter: args) {
-				GetHTML getCmdParmsPage = new GetHTML(sCommandLineParameter);
-			}
+		String[] sListURLs = commandlineParms(args);
+		
+		GetHTML getCmdParmsPage = new GetHTML();
+		for (String sCommandLineParameter: sListURLs) {
+			getCmdParmsPage.getHTML(sCommandLineParameter);
 		}
 
 	} // main end
