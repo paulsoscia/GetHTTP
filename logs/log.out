@@ -12,3 +12,39 @@
 275  2014-10-09 22:54:02,084 [main] DEBUG GetHTML  - Completed:getHTML response length=1387
 275  2014-10-09 22:54:02,084 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://www.yahoo.com/
 275  2014-10-09 22:54:02,084 [main] INFO  GetHTML  - Time: Ending 
+0    2014-10-10 07:39:54,096 [main] INFO  GetHTML  - Time: Starting 
+1    2014-10-10 07:39:54,097 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=HTTP://WWW.GOOGLE.COM/
+1    2014-10-10 07:39:54,097 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=HTTP://WWW.YAHOO.COM/
+1    2014-10-10 07:39:54,097 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://www.google.com/
+147  2014-10-10 07:39:54,243 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://www.google.com/
+147  2014-10-10 07:39:54,243 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+147  2014-10-10 07:39:54,243 [main] DEBUG GetHTML  - Completed:getHTML response length=17819
+148  2014-10-10 07:39:54,244 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://www.google.com/
+148  2014-10-10 07:39:54,244 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://www.yahoo.com/
+294  2014-10-10 07:39:54,390 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://www.yahoo.com/
+294  2014-10-10 07:39:54,390 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+294  2014-10-10 07:39:54,390 [main] DEBUG GetHTML  - Completed:getHTML response length=1387
+294  2014-10-10 07:39:54,390 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://www.yahoo.com/
+294  2014-10-10 07:39:54,390 [main] INFO  GetHTML  - Time: Ending 
+0    2014-10-10 07:40:38,950 [main] INFO  GetHTML  - Time: Starting 
+1    2014-10-10 07:40:38,951 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=HTTP://WWW.GOOGLE.COM/
+1    2014-10-10 07:40:38,951 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=HTTP://WWW.YAHOO.COM/
+1    2014-10-10 07:40:38,951 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://www.google.com/
+131  2014-10-10 07:40:39,081 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://www.google.com/
+131  2014-10-10 07:40:39,081 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+131  2014-10-10 07:40:39,081 [main] DEBUG GetHTML  - Completed:getHTML response length=17820
+132  2014-10-10 07:40:39,082 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://www.google.com/
+132  2014-10-10 07:40:39,082 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://www.yahoo.com/
+224  2014-10-10 07:40:39,174 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://www.yahoo.com/
+224  2014-10-10 07:40:39,174 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+225  2014-10-10 07:40:39,175 [main] DEBUG GetHTML  - Completed:getHTML response length=1387
+225  2014-10-10 07:40:39,175 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://www.yahoo.com/
+225  2014-10-10 07:40:39,175 [main] INFO  GetHTML  - Time: Ending 
+0    2014-10-10 07:41:44,249 [main] INFO  GetHTML  - Time: Starting 
+1    2014-10-10 07:41:44,250 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=HTTP://DOWNLOAD.FINANCE.YAHOO.COM/D/QUOTES.TXT?S=AIG&F=N&E=.CSV
+1    2014-10-10 07:41:44,250 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+150  2014-10-10 07:41:44,399 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+150  2014-10-10 07:41:44,399 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+150  2014-10-10 07:41:44,399 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+150  2014-10-10 07:41:44,399 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+151  2014-10-10 07:41:44,400 [main] INFO  GetHTML  - Time: Ending 

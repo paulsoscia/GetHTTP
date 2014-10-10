@@ -13,9 +13,11 @@ import org.apache.log4j.PropertyConfigurator;
 public class GetHTML {
 
 	static Logger	log						= Logger.getLogger(GetHTML.class.getName());
-	static String	sURL					= "http://www.bing.com/";	// A valid URL
+	//static String	sURL					= "http://www.bing.com/";	// A valid URL
 	//static String	sURL					= "http://download.finance.yahoo.com/d/[FILENAME]?s=[TICKERSYMBOLS]&f=[TAGS]&e=.csv";
-	//static String	sURL					= "http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv";
+	static String	sURL					= "http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv";
+	static String	sEmptyString = "";
+	static String	sCommandLineParmsU = "-U=";
 	
 	public void getHTML(String sLocalURL) {
 
@@ -108,8 +110,9 @@ public class GetHTML {
 	
 	public static void main(String[] args) {
 
-		String log4jConfPath = "/home/paul/workspace/dev/GetHTML/properties/log4j.properties";
-		PropertyConfigurator.configure(log4jConfPath);
+		//Build -Dlog4j.configuration=name-and-path-of-config-file
+		//String log4jConfPath = "/home/paul/workspace/dev/GetHTML/properties/log4j.properties";
+		//PropertyConfigurator.configure(log4jConfPath);
 		log.info("Time: Starting " );
 	    	    
 		String[] sListURLs = commandlineParms(args);
