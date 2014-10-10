@@ -7,11 +7,16 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 
 public class GetHTML {
 
-	static String  sURL					= "http://www.bing.com/";	// A valid URL
-		
+	static Logger	log						= Logger.getLogger(GetHTML.class.getName());
+	static String	sURL					= "http://www.bing.com/";	// A valid URL
+	//static String	sURL					= "http://download.finance.yahoo.com/d/[FILENAME]?s=[TICKERSYMBOLS]&f=[TAGS]&e=.csv";
+	//static String	sURL					= "http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv";
+	
 	public void getHTML(String sLocalURL) {
 
 		String sHTTpResponseLine	= "";	// One line from the HTTP response
@@ -31,20 +36,20 @@ public class GetHTML {
 			} 
 			catch (IOException e) {
 				iReturn = 0;
-				System.out.println("Error:  Problem reading HTML, with url " + sLocalURL + ". IOException");
+				log.error("Error:  Problem reading HTML, with url " + sLocalURL + ". IOException");
 			}
 		}
 		catch (MalformedURLException e) {
 			iReturn = 0;
-			System.out.println("Error:  Problem with url " + sLocalURL + ". MalformedURLException");
+			log.error("Error:  Problem with url " + sLocalURL + ". MalformedURLException");
 		}
 		
-		System.out.println("Completed: sURL=" + sLocalURL);
+		log.debug("Completed:getHTML sLocalURL=" + sLocalURL);
 		if (iReturn == 1)
 		{
-			System.out.println("Completed: HTTP get was successful");
-			System.out.println("Completed: response length=" + sHTTpResponseLines.length());
-			System.out.println("Completed: " + sHTTpResponseLines);
+			log.debug("Completed:getHTML HTTP get was successful");
+			log.debug("Completed:getHTML response length=" + sHTTpResponseLines.length());
+			System.out.println( sHTTpResponseLines);
 		}
 				
 	}
@@ -74,42 +79,48 @@ public class GetHTML {
 			}
 		    switch(sLeftMostCommandLineParameter){
 			    case "-U=": 
-			    	System.out.println("CommandLineParms: URLs");
+			    	log.debug("CommandLineParms: URLs " + sLeftMostCommandLineParameter + " " + sCommandLineParameter);
 			    	break;
 			    case "-I=": 
-			    	System.out.println("CommandLineParms: Input File");
+			    	log.debug("CommandLineParms: Input File");
 			    	break;
 			    case "-O=": 
-			    	System.out.println("CommandLineParms: Output File");
+			    	log.debug("CommandLineParms: Output File");
 			    	break;
 			    case "-?": 
-			    	System.out.println("CommandLineParms: Help");
+			    	log.debug("CommandLineParms: Help");
 			    	break;
 			    case "-H": 
-			    	System.out.println("CommandLineParms: Help");
+			    	log.debug("CommandLineParms: Help");
 			    	break;
 			    case "-HE": 
-			    	System.out.println("CommandLineParms: Help");
+			    	log.debug("CommandLineParms: Help");
 			    	break;
 			    default :
-			    	System.out.println("CommandLineParms: Invalid Number of Day");
+			    	log.warn("CommandLineParms: Invalid Command Line parm");
 		     }
 		}
 
 		return (strArrCommandLineParms);
 	}
+
+	
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		//	Add URL as command line parameter
-		//	Add Log4j
+
+		String log4jConfPath = "/home/paul/workspace/dev/GetHTML/properties/log4j.properties";
+		PropertyConfigurator.configure(log4jConfPath);
+		log.info("Time: Starting " );
+	    	    
 		String[] sListURLs = commandlineParms(args);
 		
 		GetHTML getCmdParmsPage = new GetHTML();
 		for (String sCommandLineParameter: sListURLs) {
+			log.info("Time: Staring getHTML Starting " + sCommandLineParameter );
 			getCmdParmsPage.getHTML(sCommandLineParameter);
+			log.info("Time: Ending getHTML Ending " + sCommandLineParameter);
 		}
-
+		log.info("Time: Ending " );
 	} // main end
 
 }

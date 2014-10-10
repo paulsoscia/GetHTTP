@@ -1,0 +1,17 @@
+# Define the root logger with appender file 
+log = /home/paul/workspace/dev/GetHTML/log
+log4j.rootLogger=CA, FA
+
+#Console Appender
+log4j.appender.CA=org.apache.log4j.ConsoleAppender
+log4j.appender.CA.layout=org.apache.log4j.PatternLayout
+log4j.appender.CA.layout.ConversionPattern=%-4r %d [%t] %-5p %c %x - %m%n
+ 
+#File Appender
+log4j.appender.FA=org.apache.log4j.FileAppender
+log4j.appender.FA.layout=org.apache.log4j.PatternLayout
+log4j.appender.FA.layout.ConversionPattern=%-4r %d [%t] %-5p %c %x - %m%n
+log4j.appender.FA.File=${log}/log.out
+
+# Set the logger level of File Appender to OFF, FATAL, ERROR, WARN, INFO, DEBUG, TRACE, ALL
+log4j.appender.FA.Threshold = TRACE

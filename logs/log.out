@@ -1,0 +1,14 @@
+0    2014-10-09 22:54:01,809 [main] INFO  GetHTML  - Time: Starting 
+1    2014-10-09 22:54:01,810 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=HTTP://WWW.GOOGLE.COM/
+1    2014-10-09 22:54:01,810 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=HTTP://WWW.YAHOO.COM/
+1    2014-10-09 22:54:01,810 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://www.google.com/
+162  2014-10-09 22:54:01,971 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://www.google.com/
+163  2014-10-09 22:54:01,972 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+163  2014-10-09 22:54:01,972 [main] DEBUG GetHTML  - Completed:getHTML response length=17764
+163  2014-10-09 22:54:01,972 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://www.google.com/
+163  2014-10-09 22:54:01,972 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://www.yahoo.com/
+275  2014-10-09 22:54:02,084 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://www.yahoo.com/
+275  2014-10-09 22:54:02,084 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+275  2014-10-09 22:54:02,084 [main] DEBUG GetHTML  - Completed:getHTML response length=1387
+275  2014-10-09 22:54:02,084 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://www.yahoo.com/
+275  2014-10-09 22:54:02,084 [main] INFO  GetHTML  - Time: Ending 
