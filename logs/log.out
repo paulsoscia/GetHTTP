@@ -48,3 +48,296 @@
 150  2014-10-10 07:41:44,399 [main] DEBUG GetHTML  - Completed:getHTML response length=19
 150  2014-10-10 07:41:44,399 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
 151  2014-10-10 07:41:44,400 [main] INFO  GetHTML  - Time: Ending 
+0    2014-10-10 22:11:40,735 [main] INFO  GetHTML  - Time: Starting 
+1    2014-10-10 22:11:40,736 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=HTTP://DOWNLOAD.FINANCE.YAHOO.COM/D/QUOTES.TXT?S=INTC&F=N&E=.CSV
+1    2014-10-10 22:11:40,736 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=HTTP://ICHART.FINANCE.YAHOO.COM/TABLE.CSV?S=INTC&A=09&B=10&C=2014
+1    2014-10-10 22:11:40,736 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=HTTP://DOWNLOAD.FINANCE.YAHOO.COM/D/QUOTES.TXT?S=AIG&F=N&E=.CSV
+1    2014-10-10 22:11:40,736 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=HTTP://ICHART.FINANCE.YAHOO.COM/TABLE.CSV?S=AIG&A=09&B=10&C=2014
+1    2014-10-10 22:11:40,736 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv
+99   2014-10-10 22:11:40,834 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv
+99   2014-10-10 22:11:40,834 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+99   2014-10-10 22:11:40,834 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+99   2014-10-10 22:11:40,834 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv
+99   2014-10-10 22:11:40,834 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014
+176  2014-10-10 22:11:40,911 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014
+176  2014-10-10 22:11:40,911 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+176  2014-10-10 22:11:40,911 [main] DEBUG GetHTML  - Completed:getHTML response length=90
+176  2014-10-10 22:11:40,911 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014
+176  2014-10-10 22:11:40,911 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+218  2014-10-10 22:11:40,953 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+218  2014-10-10 22:11:40,953 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+218  2014-10-10 22:11:40,953 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+218  2014-10-10 22:11:40,953 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+219  2014-10-10 22:11:40,954 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014
+256  2014-10-10 22:11:40,991 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014
+256  2014-10-10 22:11:40,991 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+256  2014-10-10 22:11:40,991 [main] DEBUG GetHTML  - Completed:getHTML response length=90
+256  2014-10-10 22:11:40,991 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014
+257  2014-10-10 22:11:40,992 [main] INFO  GetHTML  - Time: Ending 
+0    2014-10-10 23:36:23,394 [main] INFO  GetHTML  - Time: Starting 
+20105 2014-10-10 23:36:43,499 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=HTTP://DOWNLOAD.FINANCE.YAHOO.COM/D/QUOTES.TXT?S=INTC&F=N&E=.CSV
+43329 2014-10-10 23:37:06,723 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=HTTP://ICHART.FINANCE.YAHOO.COM/TABLE.CSV?S=INTC&A=09&B=10&C=2014
+0    2014-10-10 23:37:24,061 [main] INFO  GetHTML  - Time: Starting 
+1    2014-10-10 23:37:24,062 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=HTTP://DOWNLOAD.FINANCE.YAHOO.COM/D/QUOTES.TXT?S=INTC&F=N&E=.CSV
+1    2014-10-10 23:37:24,062 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=HTTP://ICHART.FINANCE.YAHOO.COM/TABLE.CSV?S=INTC&A=09&B=10&C=2014
+2    2014-10-10 23:37:24,063 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=HTTP://DOWNLOAD.FINANCE.YAHOO.COM/D/QUOTES.TXT?S=AIG&F=N&E=.CSV
+2    2014-10-10 23:37:24,063 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=HTTP://ICHART.FINANCE.YAHOO.COM/TABLE.CSV?S=AIG&A=09&B=10&C=2014
+2    2014-10-10 23:37:24,063 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv
+119  2014-10-10 23:37:24,180 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv
+119  2014-10-10 23:37:24,180 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+119  2014-10-10 23:37:24,180 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+119  2014-10-10 23:37:24,180 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv
+119  2014-10-10 23:37:24,180 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014
+221  2014-10-10 23:37:24,282 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014
+221  2014-10-10 23:37:24,282 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+221  2014-10-10 23:37:24,282 [main] DEBUG GetHTML  - Completed:getHTML response length=90
+221  2014-10-10 23:37:24,282 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014
+221  2014-10-10 23:37:24,282 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+272  2014-10-10 23:37:24,333 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+272  2014-10-10 23:37:24,333 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+272  2014-10-10 23:37:24,333 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+272  2014-10-10 23:37:24,333 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+273  2014-10-10 23:37:24,334 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014
+329  2014-10-10 23:37:24,390 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014
+329  2014-10-10 23:37:24,390 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+329  2014-10-10 23:37:24,390 [main] DEBUG GetHTML  - Completed:getHTML response length=90
+329  2014-10-10 23:37:24,390 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014
+329  2014-10-10 23:37:24,390 [main] INFO  GetHTML  - Time: Ending 
+0    2014-10-11 00:10:57,170 [main] INFO  GetHTML  - Time: Starting 
+1    2014-10-11 00:10:57,171 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=HTTP://DOWNLOAD.FINANCE.YAHOO.COM/D/QUOTES.TXT?S=INTC&F=N&E=.CSV
+1    2014-10-11 00:10:57,171 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=HTTP://ICHART.FINANCE.YAHOO.COM/TABLE.CSV?S=INTC&A=09&B=10&C=2014
+1    2014-10-11 00:10:57,171 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=HTTP://DOWNLOAD.FINANCE.YAHOO.COM/D/QUOTES.TXT?S=AIG&F=N&E=.CSV
+1    2014-10-11 00:10:57,171 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=HTTP://ICHART.FINANCE.YAHOO.COM/TABLE.CSV?S=AIG&A=09&B=10&C=2014
+1    2014-10-11 00:10:57,171 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv
+94   2014-10-11 00:10:57,264 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv
+94   2014-10-11 00:10:57,264 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+94   2014-10-11 00:10:57,264 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+94   2014-10-11 00:10:57,264 [main] DEBUG GetHTML  - Begin out->sysout
+94   2014-10-11 00:10:57,264 [main] DEBUG GetHTML  - End out->sysout
+94   2014-10-11 00:10:57,264 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv
+94   2014-10-11 00:10:57,264 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014
+170  2014-10-11 00:10:57,340 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014
+170  2014-10-11 00:10:57,340 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+171  2014-10-11 00:10:57,341 [main] DEBUG GetHTML  - Completed:getHTML response length=90
+171  2014-10-11 00:10:57,341 [main] DEBUG GetHTML  - Begin out->sysout
+171  2014-10-11 00:10:57,341 [main] DEBUG GetHTML  - End out->sysout
+171  2014-10-11 00:10:57,341 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014
+171  2014-10-11 00:10:57,341 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+237  2014-10-11 00:10:57,407 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+237  2014-10-11 00:10:57,407 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+237  2014-10-11 00:10:57,407 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+237  2014-10-11 00:10:57,407 [main] DEBUG GetHTML  - Begin out->sysout
+237  2014-10-11 00:10:57,407 [main] DEBUG GetHTML  - End out->sysout
+237  2014-10-11 00:10:57,407 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+237  2014-10-11 00:10:57,407 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014
+339  2014-10-11 00:10:57,509 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014
+339  2014-10-11 00:10:57,509 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+339  2014-10-11 00:10:57,509 [main] DEBUG GetHTML  - Completed:getHTML response length=90
+340  2014-10-11 00:10:57,510 [main] DEBUG GetHTML  - Begin out->sysout
+340  2014-10-11 00:10:57,510 [main] DEBUG GetHTML  - End out->sysout
+340  2014-10-11 00:10:57,510 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014
+340  2014-10-11 00:10:57,510 [main] INFO  GetHTML  - Time: Ending 
+0    2014-10-11 00:13:12,541 [main] INFO  GetHTML  - Time: Starting 
+1    2014-10-11 00:13:12,542 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=HTTP://DOWNLOAD.FINANCE.YAHOO.COM/D/QUOTES.TXT?S=INTC&F=N&E=.CSV
+1    2014-10-11 00:13:12,542 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=HTTP://ICHART.FINANCE.YAHOO.COM/TABLE.CSV?S=INTC&A=09&B=10&C=2014
+1    2014-10-11 00:13:12,542 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=HTTP://DOWNLOAD.FINANCE.YAHOO.COM/D/QUOTES.TXT?S=AIG&F=N&E=.CSV
+1    2014-10-11 00:13:12,542 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=HTTP://ICHART.FINANCE.YAHOO.COM/TABLE.CSV?S=AIG&A=09&B=10&C=2014
+1    2014-10-11 00:13:12,542 [main] DEBUG GetHTML  - CommandLineParms: Output File
+2    2014-10-11 00:13:12,543 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv
+235  2014-10-11 00:13:12,776 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv
+235  2014-10-11 00:13:12,776 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+235  2014-10-11 00:13:12,776 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+235  2014-10-11 00:13:12,776 [main] DEBUG GetHTML  - Begin out->file
+236  2014-10-11 00:13:12,777 [main] ERROR GetHTML  - /HOME/PAUL/WORKSPACE/DEV/GETHTML/OUTPUT/TEST.TXT (No such file or directory)
+238  2014-10-11 00:13:12,779 [main] ERROR GetHTML  - Error New or write to file /HOME/PAUL/WORKSPACE/DEV/GETHTML/OUTPUT/TEST.TXT (No such file or directory)
+238  2014-10-11 00:13:12,779 [main] DEBUG GetHTML  - End out->file
+238  2014-10-11 00:13:12,779 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv
+238  2014-10-11 00:13:12,779 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014
+326  2014-10-11 00:13:12,867 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014
+326  2014-10-11 00:13:12,867 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+326  2014-10-11 00:13:12,867 [main] DEBUG GetHTML  - Completed:getHTML response length=90
+326  2014-10-11 00:13:12,867 [main] DEBUG GetHTML  - Begin out->file
+326  2014-10-11 00:13:12,867 [main] ERROR GetHTML  - /HOME/PAUL/WORKSPACE/DEV/GETHTML/OUTPUT/TEST.TXT (No such file or directory)
+327  2014-10-11 00:13:12,868 [main] ERROR GetHTML  - Error New or write to file /HOME/PAUL/WORKSPACE/DEV/GETHTML/OUTPUT/TEST.TXT (No such file or directory)
+327  2014-10-11 00:13:12,868 [main] DEBUG GetHTML  - End out->file
+327  2014-10-11 00:13:12,868 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014
+327  2014-10-11 00:13:12,868 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+476  2014-10-11 00:13:13,017 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+476  2014-10-11 00:13:13,017 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+476  2014-10-11 00:13:13,017 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+476  2014-10-11 00:13:13,017 [main] DEBUG GetHTML  - Begin out->file
+476  2014-10-11 00:13:13,017 [main] ERROR GetHTML  - /HOME/PAUL/WORKSPACE/DEV/GETHTML/OUTPUT/TEST.TXT (No such file or directory)
+477  2014-10-11 00:13:13,018 [main] ERROR GetHTML  - Error New or write to file /HOME/PAUL/WORKSPACE/DEV/GETHTML/OUTPUT/TEST.TXT (No such file or directory)
+477  2014-10-11 00:13:13,018 [main] DEBUG GetHTML  - End out->file
+477  2014-10-11 00:13:13,018 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+477  2014-10-11 00:13:13,018 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014
+527  2014-10-11 00:13:13,068 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014
+527  2014-10-11 00:13:13,068 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+527  2014-10-11 00:13:13,068 [main] DEBUG GetHTML  - Completed:getHTML response length=90
+527  2014-10-11 00:13:13,068 [main] DEBUG GetHTML  - Begin out->file
+528  2014-10-11 00:13:13,069 [main] ERROR GetHTML  - /HOME/PAUL/WORKSPACE/DEV/GETHTML/OUTPUT/TEST.TXT (No such file or directory)
+529  2014-10-11 00:13:13,070 [main] ERROR GetHTML  - Error New or write to file /HOME/PAUL/WORKSPACE/DEV/GETHTML/OUTPUT/TEST.TXT (No such file or directory)
+529  2014-10-11 00:13:13,070 [main] DEBUG GetHTML  - End out->file
+529  2014-10-11 00:13:13,070 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014
+530  2014-10-11 00:13:13,071 [main] INFO  GetHTML  - Time: Staring getHTML Starting -O=/home/paul/workspace/dev/GetHTML/output/test.txt
+530  2014-10-11 00:13:13,071 [main] ERROR GetHTML  - Error:  Problem with url -O=/home/paul/workspace/dev/GetHTML/output/test.txt. MalformedURLException
+530  2014-10-11 00:13:13,071 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=-O=/home/paul/workspace/dev/GetHTML/output/test.txt
+530  2014-10-11 00:13:13,071 [main] INFO  GetHTML  - Time: Ending getHTML Ending -O=/home/paul/workspace/dev/GetHTML/output/test.txt
+530  2014-10-11 00:13:13,071 [main] INFO  GetHTML  - Time: Ending 
+0    2014-10-11 00:18:32,421 [main] INFO  GetHTML  - Time: Starting 
+0    2014-10-11 00:18:32,421 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv
+1    2014-10-11 00:18:32,422 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014
+1    2014-10-11 00:18:32,422 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+1    2014-10-11 00:18:32,422 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014
+1    2014-10-11 00:18:32,422 [main] DEBUG GetHTML  - CommandLineParms: Output File
+2    2014-10-11 00:18:32,423 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv
+94   2014-10-11 00:18:32,515 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv
+94   2014-10-11 00:18:32,515 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+94   2014-10-11 00:18:32,515 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+94   2014-10-11 00:18:32,515 [main] DEBUG GetHTML  - Begin out->file
+95   2014-10-11 00:18:32,516 [main] DEBUG GetHTML  - End out->file
+95   2014-10-11 00:18:32,516 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv
+96   2014-10-11 00:18:32,517 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014
+1194 2014-10-11 00:18:33,615 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014
+1195 2014-10-11 00:18:33,616 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+1195 2014-10-11 00:18:33,616 [main] DEBUG GetHTML  - Completed:getHTML response length=90
+1195 2014-10-11 00:18:33,616 [main] DEBUG GetHTML  - Begin out->file
+1196 2014-10-11 00:18:33,617 [main] DEBUG GetHTML  - End out->file
+1196 2014-10-11 00:18:33,617 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014
+1196 2014-10-11 00:18:33,617 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+1239 2014-10-11 00:18:33,660 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+1240 2014-10-11 00:18:33,661 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+1240 2014-10-11 00:18:33,661 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+1240 2014-10-11 00:18:33,661 [main] DEBUG GetHTML  - Begin out->file
+1241 2014-10-11 00:18:33,662 [main] DEBUG GetHTML  - End out->file
+1241 2014-10-11 00:18:33,662 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+1241 2014-10-11 00:18:33,662 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014
+1299 2014-10-11 00:18:33,720 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014
+1300 2014-10-11 00:18:33,721 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+1300 2014-10-11 00:18:33,721 [main] DEBUG GetHTML  - Completed:getHTML response length=90
+1300 2014-10-11 00:18:33,721 [main] DEBUG GetHTML  - Begin out->file
+1301 2014-10-11 00:18:33,722 [main] DEBUG GetHTML  - End out->file
+1301 2014-10-11 00:18:33,722 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014
+1301 2014-10-11 00:18:33,722 [main] INFO  GetHTML  - Time: Staring getHTML Starting -O=/home/paul/workspace/dev/GetHTML/output/test.txt
+1301 2014-10-11 00:18:33,722 [main] ERROR GetHTML  - Error:  Problem with url -O=/home/paul/workspace/dev/GetHTML/output/test.txt. MalformedURLException
+1302 2014-10-11 00:18:33,723 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=-O=/home/paul/workspace/dev/GetHTML/output/test.txt
+1302 2014-10-11 00:18:33,723 [main] INFO  GetHTML  - Time: Ending getHTML Ending -O=/home/paul/workspace/dev/GetHTML/output/test.txt
+1302 2014-10-11 00:18:33,723 [main] INFO  GetHTML  - Time: Ending 
+0    2014-10-11 00:29:11,331 [main] INFO  GetHTML  - Time: Starting 
+1    2014-10-11 00:29:11,332 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv
+1    2014-10-11 00:29:11,332 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014
+1    2014-10-11 00:29:11,332 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+1    2014-10-11 00:29:11,332 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014
+1    2014-10-11 00:29:11,332 [main] DEBUG GetHTML  - CommandLineParms: Output File
+3    2014-10-11 00:29:11,334 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv
+94   2014-10-11 00:29:11,425 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv
+94   2014-10-11 00:29:11,425 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+94   2014-10-11 00:29:11,425 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+94   2014-10-11 00:29:11,425 [main] DEBUG GetHTML  - Begin out->file
+94   2014-10-11 00:29:11,425 [main] DEBUG GetHTML  - End out->file
+94   2014-10-11 00:29:11,425 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv
+95   2014-10-11 00:29:11,426 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014
+307  2014-10-11 00:29:11,638 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014
+307  2014-10-11 00:29:11,638 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+308  2014-10-11 00:29:11,639 [main] DEBUG GetHTML  - Completed:getHTML response length=90
+308  2014-10-11 00:29:11,639 [main] DEBUG GetHTML  - Begin out->file
+308  2014-10-11 00:29:11,639 [main] DEBUG GetHTML  - End out->file
+308  2014-10-11 00:29:11,639 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014
+309  2014-10-11 00:29:11,640 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+502  2014-10-11 00:29:11,833 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+502  2014-10-11 00:29:11,833 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+502  2014-10-11 00:29:11,833 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+502  2014-10-11 00:29:11,833 [main] DEBUG GetHTML  - Begin out->file
+503  2014-10-11 00:29:11,834 [main] DEBUG GetHTML  - End out->file
+503  2014-10-11 00:29:11,834 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+503  2014-10-11 00:29:11,834 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014
+698  2014-10-11 00:29:12,029 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014
+698  2014-10-11 00:29:12,029 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+698  2014-10-11 00:29:12,029 [main] DEBUG GetHTML  - Completed:getHTML response length=90
+699  2014-10-11 00:29:12,030 [main] DEBUG GetHTML  - Begin out->file
+699  2014-10-11 00:29:12,030 [main] DEBUG GetHTML  - End out->file
+699  2014-10-11 00:29:12,030 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014
+700  2014-10-11 00:29:12,031 [main] INFO  GetHTML  - Time: Staring getHTML Starting -O=/home/paul/workspace/dev/GetHTML/output/test.txt
+700  2014-10-11 00:29:12,031 [main] ERROR GetHTML  - Error:  Problem with url -O=/home/paul/workspace/dev/GetHTML/output/test.txt. MalformedURLException
+700  2014-10-11 00:29:12,031 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=-O=/home/paul/workspace/dev/GetHTML/output/test.txt
+700  2014-10-11 00:29:12,031 [main] INFO  GetHTML  - Time: Ending getHTML Ending -O=/home/paul/workspace/dev/GetHTML/output/test.txt
+700  2014-10-11 00:29:12,031 [main] INFO  GetHTML  - Time: Ending 
+0    2014-10-11 00:30:50,615 [main] INFO  GetHTML  - Time: Starting 
+0    2014-10-11 00:31:01,821 [main] INFO  GetHTML  - Time: Starting 
+1    2014-10-11 00:31:01,822 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv
+1    2014-10-11 00:31:01,822 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014
+1    2014-10-11 00:31:01,822 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+1    2014-10-11 00:31:01,822 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014
+1    2014-10-11 00:31:01,822 [main] DEBUG GetHTML  - CommandLineParms: Output File
+3    2014-10-11 00:31:01,824 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv
+100  2014-10-11 00:31:01,921 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv
+101  2014-10-11 00:31:01,922 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+101  2014-10-11 00:31:01,922 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+101  2014-10-11 00:31:01,922 [main] DEBUG GetHTML  - Begin out->file
+103  2014-10-11 00:31:01,924 [main] DEBUG GetHTML  - End out->file
+103  2014-10-11 00:31:01,924 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv
+103  2014-10-11 00:31:01,924 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014
+189  2014-10-11 00:31:02,010 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014
+189  2014-10-11 00:31:02,010 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+189  2014-10-11 00:31:02,010 [main] DEBUG GetHTML  - Completed:getHTML response length=90
+189  2014-10-11 00:31:02,010 [main] DEBUG GetHTML  - Begin out->file
+190  2014-10-11 00:31:02,011 [main] DEBUG GetHTML  - End out->file
+190  2014-10-11 00:31:02,011 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014
+190  2014-10-11 00:31:02,011 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+226  2014-10-11 00:31:02,047 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+227  2014-10-11 00:31:02,048 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+227  2014-10-11 00:31:02,048 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+227  2014-10-11 00:31:02,048 [main] DEBUG GetHTML  - Begin out->file
+228  2014-10-11 00:31:02,049 [main] DEBUG GetHTML  - End out->file
+228  2014-10-11 00:31:02,049 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+228  2014-10-11 00:31:02,049 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014
+273  2014-10-11 00:31:02,094 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014
+273  2014-10-11 00:31:02,094 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+273  2014-10-11 00:31:02,094 [main] DEBUG GetHTML  - Completed:getHTML response length=90
+273  2014-10-11 00:31:02,094 [main] DEBUG GetHTML  - Begin out->file
+274  2014-10-11 00:31:02,095 [main] DEBUG GetHTML  - End out->file
+274  2014-10-11 00:31:02,095 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014
+274  2014-10-11 00:31:02,095 [main] INFO  GetHTML  - Time: Staring getHTML Starting -O=/home/paul/workspace/dev/GetHTML/output/test.txt
+275  2014-10-11 00:31:02,096 [main] ERROR GetHTML  - Error:  Problem with url -O=/home/paul/workspace/dev/GetHTML/output/test.txt. MalformedURLException
+275  2014-10-11 00:31:02,096 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=-O=/home/paul/workspace/dev/GetHTML/output/test.txt
+275  2014-10-11 00:31:02,096 [main] INFO  GetHTML  - Time: Ending getHTML Ending -O=/home/paul/workspace/dev/GetHTML/output/test.txt
+275  2014-10-11 00:31:02,096 [main] INFO  GetHTML  - Time: Ending 
+0    2014-10-11 00:32:10,616 [main] INFO  GetHTML  - Time: Starting 
+1    2014-10-11 00:32:10,617 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv
+1    2014-10-11 00:32:10,617 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014
+1    2014-10-11 00:32:10,617 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+1    2014-10-11 00:32:10,617 [main] DEBUG GetHTML  - CommandLineParms: URLs -U= -U=http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014
+1    2014-10-11 00:32:10,617 [main] DEBUG GetHTML  - CommandLineParms: Output File
+3    2014-10-11 00:32:10,619 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv
+100  2014-10-11 00:32:10,716 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv
+100  2014-10-11 00:32:10,716 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+100  2014-10-11 00:32:10,716 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+100  2014-10-11 00:32:10,716 [main] DEBUG GetHTML  - Begin out->file
+101  2014-10-11 00:32:10,717 [main] DEBUG GetHTML  - End out->file
+101  2014-10-11 00:32:10,717 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv
+101  2014-10-11 00:32:10,717 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014
+186  2014-10-11 00:32:10,802 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014
+186  2014-10-11 00:32:10,802 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+186  2014-10-11 00:32:10,802 [main] DEBUG GetHTML  - Completed:getHTML response length=90
+186  2014-10-11 00:32:10,802 [main] DEBUG GetHTML  - Begin out->file
+186  2014-10-11 00:32:10,802 [main] DEBUG GetHTML  - End out->file
+187  2014-10-11 00:32:10,803 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014
+187  2014-10-11 00:32:10,803 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+219  2014-10-11 00:32:10,835 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+219  2014-10-11 00:32:10,835 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+219  2014-10-11 00:32:10,835 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+219  2014-10-11 00:32:10,835 [main] DEBUG GetHTML  - Begin out->file
+219  2014-10-11 00:32:10,835 [main] DEBUG GetHTML  - End out->file
+219  2014-10-11 00:32:10,835 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+219  2014-10-11 00:32:10,835 [main] INFO  GetHTML  - Time: Staring getHTML Starting http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014
+291  2014-10-11 00:32:10,907 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014
+291  2014-10-11 00:32:10,907 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+291  2014-10-11 00:32:10,907 [main] DEBUG GetHTML  - Completed:getHTML response length=90
+291  2014-10-11 00:32:10,907 [main] DEBUG GetHTML  - Begin out->file
+292  2014-10-11 00:32:10,908 [main] DEBUG GetHTML  - End out->file
+292  2014-10-11 00:32:10,908 [main] INFO  GetHTML  - Time: Ending getHTML Ending http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014
+292  2014-10-11 00:32:10,908 [main] INFO  GetHTML  - Time: Staring getHTML Starting -O=/home/paul/workspace/dev/GetHTML/output/test.txt
+292  2014-10-11 00:32:10,908 [main] ERROR GetHTML  - Error:  Problem with url -O=/home/paul/workspace/dev/GetHTML/output/test.txt. MalformedURLException
+292  2014-10-11 00:32:10,908 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=-O=/home/paul/workspace/dev/GetHTML/output/test.txt
+292  2014-10-11 00:32:10,908 [main] INFO  GetHTML  - Time: Ending getHTML Ending -O=/home/paul/workspace/dev/GetHTML/output/test.txt
+292  2014-10-11 00:32:10,908 [main] INFO  GetHTML  - Time: Ending 

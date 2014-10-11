@@ -1,23 +1,75 @@
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
 
 public class GetHTML {
 
 	static Logger	log						= Logger.getLogger(GetHTML.class.getName());
 	//static String	sURL					= "http://www.bing.com/";	// A valid URL
-	//static String	sURL					= "http://download.finance.yahoo.com/d/[FILENAME]?s=[TICKERSYMBOLS]&f=[TAGS]&e=.csv";
-	static String	sURL					= "http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv";
-	static String	sEmptyString = "";
-	static String	sCommandLineParmsU = "-U=";
+	//																				&a=09(zero based October) &b=8 (8th and later)
+	//
+	public static final	String	sURL							= "http://www.google.com/";
+	public static final	String	sUrlYahooFinanceIntelHistorical = "http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=8&c=2014";
+	public static final	String	sUrlYahooFinanceStockName		= "http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv";
+	public static final	String	sEmptyString = "";
+	
+	public static final		String sLeftThreeHTTP 					= "HTT";
+	public static final		String sCommandLineParmsOutputSysOut	= "SYSOUT";	
+	public static final		String sCommandLineParmsUrls			= "-U=";
+	public static final		String sCommandLineParmsOutput 			= "-O=";
+	
+	public static String sOutputFileName 							= "";
+	public static Boolean bOutputFile 								= Boolean.FALSE;
+	
+	public void writeFile(String sPathAndFileName, String sDataToWriteToFile) {
+	
+		PrintWriter prtwrtFileOut;
+		try {
+			prtwrtFileOut = new PrintWriter(new FileWriter(sPathAndFileName, true));
+			prtwrtFileOut.println(sDataToWriteToFile);
+			prtwrtFileOut.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			log.error("Error opening file " + sPathAndFileName + " " + e.getMessage());
+			e.printStackTrace();
+		}
+		
+		BufferedWriter writer = null;
+		try
+		{
+		    writer = new BufferedWriter( new FileWriter( sPathAndFileName, true));
+		    writer.write( sDataToWriteToFile);
+		    writer.newLine();
+
+		}
+		catch ( IOException e)
+		{
+			log.error("Error New or write to file " + e.getMessage());
+		}
+		finally
+		{
+		    try
+		    {
+		        if ( writer != null)
+		        	writer.close( );
+		    }
+		    catch ( IOException e)
+		    {
+		    	log.error("Error closing file " + e.getMessage());
+		    }
+		}
+	}
 	
 	public void getHTML(String sLocalURL) {
 
@@ -51,7 +103,18 @@ public class GetHTML {
 		{
 			log.debug("Completed:getHTML HTTP get was successful");
 			log.debug("Completed:getHTML response length=" + sHTTpResponseLines.length());
-			System.out.println( sHTTpResponseLines);
+			if (! bOutputFile)
+			{
+				log.debug("Begin out->sysout");
+				System.out.println( sHTTpResponseLines);
+				log.debug("End out->sysout");
+			}
+			if (bOutputFile)
+			{
+				log.debug("Begin out->file");
+				writeFile(sOutputFileName, sHTTpResponseLines);
+				log.debug("End out->file");
+			}
 		}
 				
 	}
@@ -72,35 +135,37 @@ public class GetHTML {
 	    String[] strArrCommandLineParms = (String[]) listCommandLineParmsTemp.toArray( new String[listCommandLineParmsTemp.size()] );
 		
 		for (String sCommandLineParameter: strArrCommandLineParms) {
-			sCommandLineParameter = sCommandLineParameter.trim().toUpperCase();
+			sCommandLineParameter = sCommandLineParameter.trim();
 			String sLeftMostCommandLineParameter = sCommandLineParameter.substring(0,3);
-			if (sLeftMostCommandLineParameter.equals("HTT"))
+			if (sLeftMostCommandLineParameter.equalsIgnoreCase(sLeftThreeHTTP))
 			{
-				sCommandLineParameter = "-U=" + sCommandLineParameter;
+				sCommandLineParameter = sCommandLineParmsUrls + sCommandLineParameter;
 				sLeftMostCommandLineParameter = sCommandLineParameter.substring(0,3);
 			}
-		    switch(sLeftMostCommandLineParameter){
-			    case "-U=": 
+
+			    if (sLeftMostCommandLineParameter.equalsIgnoreCase(sCommandLineParmsUrls)) { 
 			    	log.debug("CommandLineParms: URLs " + sLeftMostCommandLineParameter + " " + sCommandLineParameter);
-			    	break;
-			    case "-I=": 
+			    }
+			    if (sLeftMostCommandLineParameter.equalsIgnoreCase("-I=")) { 
 			    	log.debug("CommandLineParms: Input File");
-			    	break;
-			    case "-O=": 
+			    }
+			    if (sLeftMostCommandLineParameter.equalsIgnoreCase(sCommandLineParmsOutput)) {
 			    	log.debug("CommandLineParms: Output File");
-			    	break;
-			    case "-?": 
+			    	bOutputFile = Boolean.TRUE;
+			    	sOutputFileName = sCommandLineParameter.replace(sCommandLineParmsOutput, "");
+			    }
+			    if (sLeftMostCommandLineParameter.equalsIgnoreCase("-?")) { 
 			    	log.debug("CommandLineParms: Help");
-			    	break;
-			    case "-H": 
+			    }
+			    if (sLeftMostCommandLineParameter.equalsIgnoreCase("-H")) {
 			    	log.debug("CommandLineParms: Help");
-			    	break;
-			    case "-HE": 
+			    }
+			    if (sLeftMostCommandLineParameter.equalsIgnoreCase("-H=")) {
 			    	log.debug("CommandLineParms: Help");
-			    	break;
-			    default :
+			    }
+			    if (sLeftMostCommandLineParameter.equalsIgnoreCase("dffdf")) {
 			    	log.warn("CommandLineParms: Invalid Command Line parm");
-		     }
+			    }
 		}
 
 		return (strArrCommandLineParms);
