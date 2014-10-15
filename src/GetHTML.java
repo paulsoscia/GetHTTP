@@ -31,9 +31,9 @@ public class GetHTML {
 	public static final	String sCommandLineParmsOutputSysOut	= "SYSOUT";	
 	public static final	String sCommandLineParmsUrls			= "-U=";
 	public static final	String sCommandLineParmsOutput 			= "-O=";
-	public static final	String sCommandLineParmsInput 			= "-I=";
-	public static final	String sCommandLineParmsHelp 			= "-H";
-	public static final	String sCommandLineParmsDateFormat 		= "-T";
+	public static final	String sCommandLineParmsDateFormat 		= "-D=";
+	public static final	String sCommandLineParmsInput 			= "-I=";	// NOT supported
+	public static final	String sCommandLineParmsHelp 			= "-H";		// NOT supported
 	
 	private static		String 	sOutputFileName 				= "";
 	private static		Boolean bOutputFile 					= Boolean.FALSE;
@@ -85,17 +85,8 @@ public class GetHTML {
 	
 	public void writeFile(String sPathAndFileName, String sDataToWriteToFile) {
 	
-		PrintWriter prtwrtFileOut;
-		try {
-			sPathAndFileName = sPathAndFileName.replace(".", dfFileNameDateFormat.format(dtFileNameDate) + ".");
-			prtwrtFileOut = new PrintWriter(new FileWriter(sPathAndFileName, true));
-			prtwrtFileOut.println(sDataToWriteToFile);
-			prtwrtFileOut.close();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			log.error("Error opening file " + sPathAndFileName + " " + e.getMessage());
-			e.printStackTrace();
-		}
+		dfFileNameDateFormat = new SimpleDateFormat(sFileNameDateFormat);
+		sPathAndFileName = sPathAndFileName.replace(".", dfFileNameDateFormat.format(dtFileNameDate) + ".");
 		
 		BufferedWriter writer = null;
 		try
@@ -108,6 +99,7 @@ public class GetHTML {
 		catch ( IOException e)
 		{
 			log.error("Error New or write to file " + e.getMessage());
+			e.printStackTrace();
 		}
 		finally
 		{
@@ -119,6 +111,7 @@ public class GetHTML {
 		    catch ( IOException e)
 		    {
 		    	log.error("Error closing file " + e.getMessage());
+		    	e.printStackTrace();
 		    }
 		}
 	}
@@ -212,8 +205,9 @@ public class GetHTML {
 			    if (sLeftMostCommandLineParameter.equalsIgnoreCase("-H")) {
 			    	log.debug("CommandLineParms: Help");
 			    }
-			    if (sLeftMostCommandLineParameter.equalsIgnoreCase("-G")) {
+			    if (sLeftMostCommandLineParameter.equalsIgnoreCase(sCommandLineParmsDateFormat)) {
 			    	log.debug("Append GUID or TimeStamp to the end of the filename");
+			    	sFileNameDateFormat =sCommandLineParameter.replace(sCommandLineParmsDateFormat, "");
 			    }
 			    if (sLeftMostCommandLineParameter.equalsIgnoreCase("dffdf")) {
 			    	log.warn("CommandLineParms: Invalid Command Line parm");

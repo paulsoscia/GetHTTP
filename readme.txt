@@ -23,6 +23,9 @@ You can add an output file instead of the default (standard out // sysout) add -
 (A) with -O
 java -Dlog4j.configuration=file:"/home/paul/workspace/dev/GetHTML/log/log4j.properties" -classpath /home/paul/workspace/dev/GetHTML/libs/log4j-1.2.17.jar:. GetHTML http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014 http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014 -O=/home/paul/workspace/dev/GetHTML/output/test.txt
 
+(B) with -O you can use -D
+java -Dlog4j.configuration=file:"/home/paul/workspace/dev/GetHTML/log/log4j.properties" -classpath /home/paul/workspace/dev/GetHTML/libs/log4j-1.2.17.jar:. GetHTML http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014 http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014 -O=/home/paul/workspace/dev/GetHTML/output/test.txt -D=MMddyyyy_HH:mm:ss:SSS
+
 URLs
 
 Example 
