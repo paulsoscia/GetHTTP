@@ -8,7 +8,10 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -24,18 +27,67 @@ public class GetHTML {
 	public static final	String	sUrlYahooFinanceStockName		= "http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv";
 	public static final	String	sEmptyString = "";
 	
-	public static final		String sLeftThreeHTTP 					= "HTT";
-	public static final		String sCommandLineParmsOutputSysOut	= "SYSOUT";	
-	public static final		String sCommandLineParmsUrls			= "-U=";
-	public static final		String sCommandLineParmsOutput 			= "-O=";
+	public static final	String sLeftThreeHTTP 					= "HTT";
+	public static final	String sCommandLineParmsOutputSysOut	= "SYSOUT";	
+	public static final	String sCommandLineParmsUrls			= "-U=";
+	public static final	String sCommandLineParmsOutput 			= "-O=";
+	public static final	String sCommandLineParmsInput 			= "-I=";
+	public static final	String sCommandLineParmsHelp 			= "-H";
+	public static final	String sCommandLineParmsDateFormat 		= "-T";
 	
-	public static String sOutputFileName 							= "";
-	public static Boolean bOutputFile 								= Boolean.FALSE;
+	private static		String 	sOutputFileName 				= "";
+	private static		Boolean bOutputFile 					= Boolean.FALSE;
+	private static		Boolean bOutputFileWithTimeStamp 		= Boolean.FALSE;
+	
+	private static		String		sFileNameDateFormat			= 	"yyyyMMdd_HH:mm:ss:SSS";
+	private static		Date   		dtFileNameDate				=	new Date();
+	private static		DateFormat	dfFileNameDateFormat		=	new SimpleDateFormat(sFileNameDateFormat);
+	
+	public static String getsFileNameDateFormat() {
+		return sFileNameDateFormat;
+	}
+
+	public static void setsFileNameDateFormat(String sFileNameDateFormat) {
+		GetHTML.sFileNameDateFormat = sFileNameDateFormat;
+	}
+
+	public static Date getDtFileNameDate() {
+		return dtFileNameDate;
+	}
+
+	public static void setDtFileNameDate(Date dtFileNameDate) {
+		GetHTML.dtFileNameDate = dtFileNameDate;
+	}
+
+	public static DateFormat getDfFileNameDateFormat() {
+		return dfFileNameDateFormat;
+	}
+
+	public static void setDfFileNameDateFormat(DateFormat dfFileNameDateFormat) {
+		GetHTML.dfFileNameDateFormat = dfFileNameDateFormat;
+	}
+	
+	public static String getsOutputFileName() {
+		return sOutputFileName;
+	}
+
+	public static void setsOutputFileName(String sOutputFileName) {
+		GetHTML.sOutputFileName = sOutputFileName;
+	}
+
+	public static Boolean getbOutputFile() {
+		return bOutputFile;
+	}
+
+	public static void setbOutputFile(Boolean bOutputFile) {
+		GetHTML.bOutputFile = bOutputFile;
+	}
 	
 	public void writeFile(String sPathAndFileName, String sDataToWriteToFile) {
 	
 		PrintWriter prtwrtFileOut;
 		try {
+			sPathAndFileName = sPathAndFileName.replace(".", dfFileNameDateFormat.format(dtFileNameDate) + ".");
 			prtwrtFileOut = new PrintWriter(new FileWriter(sPathAndFileName, true));
 			prtwrtFileOut.println(sDataToWriteToFile);
 			prtwrtFileOut.close();
@@ -160,8 +212,8 @@ public class GetHTML {
 			    if (sLeftMostCommandLineParameter.equalsIgnoreCase("-H")) {
 			    	log.debug("CommandLineParms: Help");
 			    }
-			    if (sLeftMostCommandLineParameter.equalsIgnoreCase("-H=")) {
-			    	log.debug("CommandLineParms: Help");
+			    if (sLeftMostCommandLineParameter.equalsIgnoreCase("-G")) {
+			    	log.debug("Append GUID or TimeStamp to the end of the filename");
 			    }
 			    if (sLeftMostCommandLineParameter.equalsIgnoreCase("dffdf")) {
 			    	log.warn("CommandLineParms: Invalid Command Line parm");
