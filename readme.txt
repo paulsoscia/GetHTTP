@@ -1,30 +1,33 @@
-Basic java program that does get of HTML
+Basic java program that does a "get" of HTML
 
+build class file (UNIX example) 
+
+javac -classpath /home/paul/workspace/dev/GetHTML/libs/log4j-1.2.17.jar:. GetHTML.java
 
 With Log4j support, example of running from the command line, assumes a path exists /home/paul/workspace/dev/libs
-java -Dlog4j.configuration=file:"/home/paul/workspace/dev/GetHTML/log/log4j.properties" -classpath /home/paul/workspace/dev/GetHTML/libs/log4j-1.2.17.jar:. GetHTML http://www.google.com/
+java -Dlog4j.configuration=file:"/home/paul/workspace/dev/GetHTML/properties/log4j.properties" -classpath /home/paul/workspace/dev/GetHTML/libs/log4j-1.2.17.jar:. GetHTML http://www.google.com/
 
 Four ways to test program (from LINUX command line) 
 
 (1) with command line parm
-java -Dlog4j.configuration=file:"/home/paul/workspace/dev/GetHTML/log/log4j.properties" -classpath /home/paul/workspace/dev/GetHTML/libs/log4j-1.2.17.jar:. GetHTML http://www.google.com/
+java -Dlog4j.configuration=file:"/home/paul/workspace/dev/GetHTML/properties/log4j.properties" -classpath /home/paul/workspace/dev/GetHTML/libs/log4j-1.2.17.jar:. GetHTML http://www.google.com/
 
 (2) with no command line parms by default
-java -Dlog4j.configuration=file:"/home/paul/workspace/dev/GetHTML/log/log4j.properties" -classpath /home/paul/workspace/dev/GetHTML/libs/log4j-1.2.17.jar:. GetHTML
+java -Dlog4j.configuration=file:"/home/paul/workspace/dev/GetHTML/properties/log4j.properties" -classpath /home/paul/workspace/dev/GetHTML/libs/log4j-1.2.17.jar:. GetHTML
 
 (3) with multiple command line parms
-java -Dlog4j.configuration=file:"/home/paul/workspace/dev/GetHTML/log/log4j.properties" -classpath /home/paul/workspace/dev/GetHTML/libs/log4j-1.2.17.jar:. GetHTML -U=http://www.google.com/ -U=http://www.yahoo.com/ 
+java -Dlog4j.configuration=file:"/home/paul/workspace/dev/GetHTML/properties/log4j.properties" -classpath /home/paul/workspace/dev/GetHTML/libs/log4j-1.2.17.jar:. GetHTML -U=http://www.google.com/ -U=http://www.yahoo.com/ 
 
 (4) with multiple command line parms
-java -Dlog4j.configuration=file:"/home/paul/workspace/dev/GetHTML/log/log4j.properties" -classpath /home/paul/workspace/dev/GetHTML/libs/log4j-1.2.17.jar:. GetHTML http://www.google.com/ http://www.yahoo.com/
+java -Dlog4j.configuration=file:"/home/paul/workspace/dev/GetHTML/properties/log4j.properties" -classpath /home/paul/workspace/dev/GetHTML/libs/log4j-1.2.17.jar:. GetHTML http://www.google.com/ http://www.yahoo.com/
 
 You can add an output file instead of the default (standard out // sysout) add -O command line parm example  -O=/home/paul/workspace/dev/GetHTML/output/test.txt
 
 (A) with -O
-java -Dlog4j.configuration=file:"/home/paul/workspace/dev/GetHTML/log/log4j.properties" -classpath /home/paul/workspace/dev/GetHTML/libs/log4j-1.2.17.jar:. GetHTML http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014 http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014 -O=/home/paul/workspace/dev/GetHTML/output/test.txt
+java -Dlog4j.configuration=file:"/home/paul/workspace/dev/GetHTML/properties/log4j.properties" -classpath /home/paul/workspace/dev/GetHTML/libs/log4j-1.2.17.jar:. GetHTML http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014 http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014 -O=/home/paul/workspace/dev/GetHTML/output/test.txt
 
 (B) with -O you can use -D
-java -Dlog4j.configuration=file:"/home/paul/workspace/dev/GetHTML/log/log4j.properties" -classpath /home/paul/workspace/dev/GetHTML/libs/log4j-1.2.17.jar:. GetHTML http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014 http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014 -O=/home/paul/workspace/dev/GetHTML/output/test.txt -D=MMddyyyy_HH:mm:ss:SSS
+java -Dlog4j.configuration=file:"/home/paul/workspace/dev/GetHTML/properties/log4j.properties" -classpath /home/paul/workspace/dev/GetHTML/libs/log4j-1.2.17.jar:. GetHTML http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014 http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014 -O=/home/paul/workspace/dev/GetHTML/output/test.txt -D=MMddyyyy_HH:mm:ss:SSS
 
 URLs
 
@@ -45,6 +48,12 @@ g - Optional.  This parameter is to specify the interval of the data you want to
 
 Example
 
-"http://download.finance.yahoo.com/d/[FILENAME]?s=[TICKERSYMBOLS]&f=[TAGS]&e=.csv 
+http://download.finance.yahoo.com/d/[FILENAME]?s=[TICKERSYMBOLS]&f=[TAGS]&e=.csv 
+
+
+
+example
+java -Dlog4j.configuration=file:"/home/paul/workspace/dev/GetHTML/properties/log4j.properties" -classpath /home/paul/workspace/dev/GetHTML/libs/log4j-1.2.17.jar:. GetHTML http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014 http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014 -O=/home/paul/workspace/dev/GetHTML/output/test.txt -D=MMddyyyy_HH:mm:ss:SSS
+
 
 

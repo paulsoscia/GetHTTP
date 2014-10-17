@@ -1,11 +1,9 @@
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.PrintWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.DateFormat;
@@ -22,9 +20,10 @@ public class GetHTML {
 	//static String	sURL					= "http://www.bing.com/";	// A valid URL
 	//																				&a=09(zero based October) &b=8 (8th and later)
 	//
-	public static final	String	sURL							= "http://www.google.com/";
+	
 	public static final	String	sUrlYahooFinanceIntelHistorical = "http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=8&c=2014";
 	public static final	String	sUrlYahooFinanceStockName		= "http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv";
+	public static final	String	sURL							= sUrlYahooFinanceStockName;
 	public static final	String	sEmptyString = "";
 	
 	public static final	String sLeftThreeHTTP 					= "HTT";
@@ -122,6 +121,10 @@ public class GetHTML {
 		String sHTTpResponseLines	= "";	// Entire HTTP response
 		Integer iReturn = 0;
 		
+		if (sLocalURL.substring(0,sCommandLineParmsUrls.length()).equals(sCommandLineParmsUrls))
+		{
+			sLocalURL = sLocalURL.replace(sCommandLineParmsUrls, "");
+		}
 		try {
 			iReturn = 1;
 			URL urlSiteToGetHTML = new URL(sLocalURL);
@@ -130,6 +133,10 @@ public class GetHTML {
 				BufferedReader brGetHtmlData = new BufferedReader(new InputStreamReader(isGetHtmlData));
 				while ((sHTTpResponseLine = brGetHtmlData.readLine()) != null) {
 					sHTTpResponseLines += sHTTpResponseLine;
+				}
+				if (sHTTpResponseLines.equals(""))
+				{
+					sHTTpResponseLines = sHTTpResponseLine;
 				}
 
 			} 
@@ -143,7 +150,7 @@ public class GetHTML {
 			log.error("Error:  Problem with url " + sLocalURL + ". MalformedURLException");
 		}
 		
-		log.debug("Completed:getHTML sLocalURL=" + sLocalURL);
+		log.debug("Completed:getHTML sLocalURL=" + sLocalURL  + " iReturn=" + iReturn + "(1 is successful)");
 		if (iReturn == 1)
 		{
 			log.debug("Completed:getHTML HTTP get was successful");
@@ -151,14 +158,16 @@ public class GetHTML {
 			if (! bOutputFile)
 			{
 				log.debug("Begin out->sysout");
+				//System.out.println( sHTTpResponseLines.replaceAll("\"", ""));
 				System.out.println( sHTTpResponseLines);
-				log.debug("End out->sysout");
+				log.debug(sHTTpResponseLines);
+				log.debug("End   out->sysout");
 			}
 			if (bOutputFile)
 			{
-				log.debug("Begin out->file");
+				log.debug("Begin out->file sOutputFileName=" + sOutputFileName);
 				writeFile(sOutputFileName, sHTTpResponseLines);
-				log.debug("End out->file");
+				log.debug("End  out->file sOutputFileName=" + sOutputFileName);
 			}
 		}
 				
@@ -174,6 +183,8 @@ public class GetHTML {
 	        }
 	    }
 	    if (args.length == 0) {
+	    	log.debug("no command line parms was sent to the program");
+	    	log.debug("using the default command line parms with default URLS=" + sURL);
 	    	listCommandLineParmsTemp.add(sURL);
 	    }
 	    // nonBlank will have all the elements which contain some characters.
@@ -189,7 +200,8 @@ public class GetHTML {
 			}
 
 			    if (sLeftMostCommandLineParameter.equalsIgnoreCase(sCommandLineParmsUrls)) { 
-			    	log.debug("CommandLineParms: URLs " + sLeftMostCommandLineParameter + " " + sCommandLineParameter);
+			    	log.debug("CommandLineParms: URLs 3 left most chars sLeftMostCommandLineParameter=" + sLeftMostCommandLineParameter );
+			    	log.debug("CommandLineParms: URLs sCommandLineParameter=" + sCommandLineParameter);
 			    }
 			    if (sLeftMostCommandLineParameter.equalsIgnoreCase("-I=")) { 
 			    	log.debug("CommandLineParms: Input File");
@@ -224,17 +236,17 @@ public class GetHTML {
 		//Build -Dlog4j.configuration=name-and-path-of-config-file
 		//String log4jConfPath = "/home/paul/workspace/dev/GetHTML/properties/log4j.properties";
 		//PropertyConfigurator.configure(log4jConfPath);
-		log.info("Time: Starting " );
+		log.info("Time: Starting (main)" );
 	    	    
 		String[] sListURLs = commandlineParms(args);
 		
 		GetHTML getCmdParmsPage = new GetHTML();
 		for (String sCommandLineParameter: sListURLs) {
-			log.info("Time: Staring getHTML Starting " + sCommandLineParameter );
+			log.info("Time: Staring getHTML (main) Starting " + sCommandLineParameter );
 			getCmdParmsPage.getHTML(sCommandLineParameter);
-			log.info("Time: Ending getHTML Ending " + sCommandLineParameter);
+			log.info("Time: Ending  getHTML (main) Ending   " + sCommandLineParameter);
 		}
-		log.info("Time: Ending " );
+		log.info("Time: Ending   (main)" );
 	} // main end
 
 }
