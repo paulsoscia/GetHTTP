@@ -261,3 +261,392 @@
 193  2014-10-16 16:05:12,947 [main] DEBUG GetHTML  - End   out->sysout
 194  2014-10-16 16:05:12,948 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -U=http://www.google.com
 194  2014-10-16 16:05:12,948 [main] INFO  GetHTML  - Time: Ending   (main)
+0    2014-10-16 20:55:18,200 [main] INFO  GetHTML  - Time: Starting (main)
+0    2014-10-16 21:00:45,263 [main] INFO  GetHTML  - Time: Starting (main)
+173  2014-10-16 21:00:45,436 [main] ERROR GetHTML  - Error: Access denied for user 'sqluser'@'localhost' (using password: YES)
+174  2014-10-16 21:00:45,437 [main] DEBUG GetHTML  - CommandLineParms: URLs 3 left most chars sLeftMostCommandLineParameter=-U=
+174  2014-10-16 21:00:45,437 [main] DEBUG GetHTML  - CommandLineParms: URLs sCommandLineParameter=-U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+174  2014-10-16 21:00:45,437 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+352  2014-10-16 21:00:45,615 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv iReturn=1(1 is successful)
+352  2014-10-16 21:00:45,615 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+352  2014-10-16 21:00:45,615 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+352  2014-10-16 21:00:45,615 [main] DEBUG GetHTML  - Begin out->sysout
+352  2014-10-16 21:00:45,615 [main] DEBUG GetHTML  - "American Internat"
+352  2014-10-16 21:00:45,615 [main] DEBUG GetHTML  - End   out->sysout
+352  2014-10-16 21:00:45,615 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+352  2014-10-16 21:00:45,615 [main] INFO  GetHTML  - Time: Ending   (main)
+0    2014-10-16 21:02:24,671 [main] INFO  GetHTML  - Time: Starting (main)
+164  2014-10-16 21:02:24,835 [main] ERROR GetHTML  - Error: Access denied for user 'sqluser'@'localhost' (using password: YES)
+166  2014-10-16 21:02:24,837 [main] DEBUG GetHTML  - CommandLineParms: URLs 3 left most chars sLeftMostCommandLineParameter=-U=
+166  2014-10-16 21:02:24,837 [main] DEBUG GetHTML  - CommandLineParms: URLs sCommandLineParameter=-U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+166  2014-10-16 21:02:24,837 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+510637 2014-10-16 21:10:55,308 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv iReturn=1(1 is successful)
+510637 2014-10-16 21:10:55,308 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+510637 2014-10-16 21:10:55,308 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+510637 2014-10-16 21:10:55,308 [main] DEBUG GetHTML  - Begin out->sysout
+511283 2014-10-16 21:10:55,954 [main] DEBUG GetHTML  - "American Internat"
+511283 2014-10-16 21:10:55,954 [main] DEBUG GetHTML  - End   out->sysout
+511283 2014-10-16 21:10:55,954 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+511283 2014-10-16 21:10:55,954 [main] INFO  GetHTML  - Time: Ending   (main)
+0    2014-10-16 21:11:09,809 [main] INFO  GetHTML  - Time: Starting (main)
+190  2014-10-16 21:11:09,999 [main] ERROR GetHTML  - Error: Unknown database 'feedback'
+191  2014-10-16 21:11:10,000 [main] DEBUG GetHTML  - CommandLineParms: URLs 3 left most chars sLeftMostCommandLineParameter=-U=
+191  2014-10-16 21:11:10,000 [main] DEBUG GetHTML  - CommandLineParms: URLs sCommandLineParameter=-U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+191  2014-10-16 21:11:10,000 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+654  2014-10-16 21:11:10,463 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv iReturn=1(1 is successful)
+654  2014-10-16 21:11:10,463 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+655  2014-10-16 21:11:10,464 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+655  2014-10-16 21:11:10,464 [main] DEBUG GetHTML  - Begin out->sysout
+655  2014-10-16 21:11:10,464 [main] DEBUG GetHTML  - "American Internat"
+655  2014-10-16 21:11:10,464 [main] DEBUG GetHTML  - End   out->sysout
+655  2014-10-16 21:11:10,464 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+655  2014-10-16 21:11:10,464 [main] INFO  GetHTML  - Time: Ending   (main)
+0    2014-10-16 21:14:01,012 [main] INFO  GetHTML  - Time: Starting (main)
+177  2014-10-16 21:14:01,189 [main] ERROR GetHTML  - Error: Table 'FEEDBACK.COMMENTS' doesn't exist
+178  2014-10-16 21:14:01,190 [main] DEBUG GetHTML  - CommandLineParms: URLs 3 left most chars sLeftMostCommandLineParameter=-U=
+178  2014-10-16 21:14:01,190 [main] DEBUG GetHTML  - CommandLineParms: URLs sCommandLineParameter=-U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+178  2014-10-16 21:14:01,190 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+412  2014-10-16 21:14:01,424 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv iReturn=1(1 is successful)
+412  2014-10-16 21:14:01,424 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+412  2014-10-16 21:14:01,424 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+412  2014-10-16 21:14:01,424 [main] DEBUG GetHTML  - Begin out->sysout
+412  2014-10-16 21:14:01,424 [main] DEBUG GetHTML  - "American Internat"
+412  2014-10-16 21:14:01,424 [main] DEBUG GetHTML  - End   out->sysout
+413  2014-10-16 21:14:01,425 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+413  2014-10-16 21:14:01,425 [main] INFO  GetHTML  - Time: Ending   (main)
+0    2014-10-16 21:15:36,637 [main] INFO  GetHTML  - Time: Starting (main)
+188  2014-10-16 21:15:36,825 [main] ERROR GetHTML  - Error: Table 'FEEDBACK.COMMENTS' doesn't exist
+189  2014-10-16 21:15:36,826 [main] DEBUG GetHTML  - CommandLineParms: URLs 3 left most chars sLeftMostCommandLineParameter=-U=
+189  2014-10-16 21:15:36,826 [main] DEBUG GetHTML  - CommandLineParms: URLs sCommandLineParameter=-U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+189  2014-10-16 21:15:36,826 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+343  2014-10-16 21:15:36,980 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv iReturn=1(1 is successful)
+343  2014-10-16 21:15:36,980 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+343  2014-10-16 21:15:36,980 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+343  2014-10-16 21:15:36,980 [main] DEBUG GetHTML  - Begin out->sysout
+343  2014-10-16 21:15:36,980 [main] DEBUG GetHTML  - "American Internat"
+343  2014-10-16 21:15:36,980 [main] DEBUG GetHTML  - End   out->sysout
+343  2014-10-16 21:15:36,980 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+343  2014-10-16 21:15:36,980 [main] INFO  GetHTML  - Time: Ending   (main)
+1    2014-10-16 21:16:57,056 [main] INFO  GetHTML  - Time: Starting (main)
+216  2014-10-16 21:16:57,271 [main] DEBUG GetHTML  - CommandLineParms: URLs 3 left most chars sLeftMostCommandLineParameter=-U=
+216  2014-10-16 21:16:57,271 [main] DEBUG GetHTML  - CommandLineParms: URLs sCommandLineParameter=-U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+216  2014-10-16 21:16:57,271 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+300  2014-10-16 21:16:57,355 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv iReturn=1(1 is successful)
+300  2014-10-16 21:16:57,355 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+300  2014-10-16 21:16:57,355 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+300  2014-10-16 21:16:57,355 [main] DEBUG GetHTML  - Begin out->sysout
+300  2014-10-16 21:16:57,355 [main] DEBUG GetHTML  - "American Internat"
+300  2014-10-16 21:16:57,355 [main] DEBUG GetHTML  - End   out->sysout
+300  2014-10-16 21:16:57,355 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+300  2014-10-16 21:16:57,355 [main] INFO  GetHTML  - Time: Ending   (main)
+0    2014-10-16 21:42:43,040 [main] INFO  GetHTML  - Time: Starting (main)
+209  2014-10-16 21:42:43,249 [main] DEBUG GetHTML  - CommandLineParms: URLs 3 left most chars sLeftMostCommandLineParameter=-U=
+210  2014-10-16 21:42:43,250 [main] DEBUG GetHTML  - CommandLineParms: URLs sCommandLineParameter=-U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+210  2014-10-16 21:42:43,250 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+6517 2014-10-16 21:42:49,557 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv iReturn=1(1 is successful)
+6517 2014-10-16 21:42:49,557 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+6517 2014-10-16 21:42:49,557 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+6517 2014-10-16 21:42:49,557 [main] DEBUG GetHTML  - Begin out->sysout
+6517 2014-10-16 21:42:49,557 [main] DEBUG GetHTML  - "American Internat"
+6517 2014-10-16 21:42:49,557 [main] DEBUG GetHTML  - End   out->sysout
+6517 2014-10-16 21:42:49,557 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+6517 2014-10-16 21:42:49,557 [main] INFO  GetHTML  - Time: Ending   (main)
+0    2014-10-16 21:46:08,021 [main] INFO  GetHTML  - Time: Starting (main)
+228  2014-10-16 21:46:08,249 [main] DEBUG GetHTML  - CommandLineParms: URLs 3 left most chars sLeftMostCommandLineParameter=-U=
+228  2014-10-16 21:46:08,249 [main] DEBUG GetHTML  - CommandLineParms: URLs sCommandLineParameter=-U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+228  2014-10-16 21:46:08,249 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+2827 2014-10-16 21:46:10,848 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv iReturn=1(1 is successful)
+2827 2014-10-16 21:46:10,848 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+2827 2014-10-16 21:46:10,848 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+2827 2014-10-16 21:46:10,848 [main] DEBUG GetHTML  - Begin out->sysout
+2827 2014-10-16 21:46:10,848 [main] DEBUG GetHTML  - "American Internat"
+2827 2014-10-16 21:46:10,848 [main] DEBUG GetHTML  - End   out->sysout
+2827 2014-10-16 21:46:10,848 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+2827 2014-10-16 21:46:10,848 [main] INFO  GetHTML  - Time: Ending   (main)
+0    2014-10-16 21:49:31,575 [main] INFO  GetHTML  - Time: Starting (main)
+194  2014-10-16 21:49:31,769 [main] DEBUG GetHTML  - CommandLineParms: URLs 3 left most chars sLeftMostCommandLineParameter=-U=
+194  2014-10-16 21:49:31,769 [main] DEBUG GetHTML  - CommandLineParms: URLs sCommandLineParameter=-U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+194  2014-10-16 21:49:31,769 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+443  2014-10-16 21:49:32,018 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv iReturn=1(1 is successful)
+443  2014-10-16 21:49:32,018 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+443  2014-10-16 21:49:32,018 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+443  2014-10-16 21:49:32,018 [main] DEBUG GetHTML  - Begin out->sysout
+443  2014-10-16 21:49:32,018 [main] DEBUG GetHTML  - "American Internat"
+443  2014-10-16 21:49:32,018 [main] DEBUG GetHTML  - End   out->sysout
+444  2014-10-16 21:49:32,019 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+444  2014-10-16 21:49:32,019 [main] INFO  GetHTML  - Time: Ending   (main)
+0    2014-10-16 22:37:59,940 [main] INFO  GetHTML  - Time: Starting (main)
+192  2014-10-16 22:38:00,132 [main] DEBUG GetHTML  - CommandLineParms: URLs 3 left most chars sLeftMostCommandLineParameter=-U=
+192  2014-10-16 22:38:00,132 [main] DEBUG GetHTML  - CommandLineParms: URLs sCommandLineParameter=-U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+192  2014-10-16 22:38:00,132 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+327  2014-10-16 22:38:00,267 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv iReturn=1(1 is successful)
+327  2014-10-16 22:38:00,267 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+327  2014-10-16 22:38:00,267 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+327  2014-10-16 22:38:00,267 [main] DEBUG GetHTML  - Begin out->sysout
+327  2014-10-16 22:38:00,267 [main] DEBUG GetHTML  - "American Internat"
+327  2014-10-16 22:38:00,267 [main] DEBUG GetHTML  - End   out->sysout
+327  2014-10-16 22:38:00,267 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+327  2014-10-16 22:38:00,267 [main] INFO  GetHTML  - Time: Ending   (main)
+1    2014-10-16 22:39:18,501 [main] INFO  GetHTML  - Time: Starting (main)
+195  2014-10-16 22:39:18,695 [main] DEBUG GetHTML  - CommandLineParms: URLs 3 left most chars sLeftMostCommandLineParameter=-U=
+195  2014-10-16 22:39:18,695 [main] DEBUG GetHTML  - CommandLineParms: URLs sCommandLineParameter=-U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+195  2014-10-16 22:39:18,695 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+308  2014-10-16 22:39:18,808 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv iReturn=1(1 is successful)
+308  2014-10-16 22:39:18,808 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+309  2014-10-16 22:39:18,809 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+309  2014-10-16 22:39:18,809 [main] DEBUG GetHTML  - Begin out->sysout
+309  2014-10-16 22:39:18,809 [main] DEBUG GetHTML  - "American Internat"
+309  2014-10-16 22:39:18,809 [main] DEBUG GetHTML  - End   out->sysout
+309  2014-10-16 22:39:18,809 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+309  2014-10-16 22:39:18,809 [main] INFO  GetHTML  - Time: Ending   (main)
+0    2014-10-16 22:39:27,424 [main] INFO  GetHTML  - Time: Starting (main)
+208  2014-10-16 22:39:27,632 [main] DEBUG GetHTML  - CommandLineParms: URLs 3 left most chars sLeftMostCommandLineParameter=-U=
+208  2014-10-16 22:39:27,632 [main] DEBUG GetHTML  - CommandLineParms: URLs sCommandLineParameter=-U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+208  2014-10-16 22:39:27,632 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+318  2014-10-16 22:39:27,742 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv iReturn=1(1 is successful)
+318  2014-10-16 22:39:27,742 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+318  2014-10-16 22:39:27,742 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+318  2014-10-16 22:39:27,742 [main] DEBUG GetHTML  - Begin out->sysout
+318  2014-10-16 22:39:27,742 [main] DEBUG GetHTML  - "American Internat"
+318  2014-10-16 22:39:27,742 [main] DEBUG GetHTML  - End   out->sysout
+318  2014-10-16 22:39:27,742 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+318  2014-10-16 22:39:27,742 [main] INFO  GetHTML  - Time: Ending   (main)
+0    2014-10-16 22:40:25,707 [main] INFO  GetHTML  - Time: Starting (main)
+197  2014-10-16 22:40:25,904 [main] DEBUG GetHTML  - CommandLineParms: URLs 3 left most chars sLeftMostCommandLineParameter=-U=
+198  2014-10-16 22:40:25,905 [main] DEBUG GetHTML  - CommandLineParms: URLs sCommandLineParameter=-U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+198  2014-10-16 22:40:25,905 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+303  2014-10-16 22:40:26,010 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv iReturn=1(1 is successful)
+303  2014-10-16 22:40:26,010 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+303  2014-10-16 22:40:26,010 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+303  2014-10-16 22:40:26,010 [main] DEBUG GetHTML  - Begin out->sysout
+303  2014-10-16 22:40:26,010 [main] DEBUG GetHTML  - "American Internat"
+303  2014-10-16 22:40:26,010 [main] DEBUG GetHTML  - End   out->sysout
+303  2014-10-16 22:40:26,010 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+303  2014-10-16 22:40:26,010 [main] INFO  GetHTML  - Time: Ending   (main)
+0    2014-10-16 22:45:05,343 [main] INFO  GetHTML  - Time: Starting (main)
+180  2014-10-16 22:45:05,523 [main] ERROR GetHTML  - Error: Column 'primary' not found.
+180  2014-10-16 22:45:05,523 [main] DEBUG GetHTML  - CommandLineParms: URLs 3 left most chars sLeftMostCommandLineParameter=-U=
+180  2014-10-16 22:45:05,523 [main] DEBUG GetHTML  - CommandLineParms: URLs sCommandLineParameter=-U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+181  2014-10-16 22:45:05,524 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+277  2014-10-16 22:45:05,620 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv iReturn=1(1 is successful)
+278  2014-10-16 22:45:05,621 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+278  2014-10-16 22:45:05,621 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+278  2014-10-16 22:45:05,621 [main] DEBUG GetHTML  - Begin out->sysout
+278  2014-10-16 22:45:05,621 [main] DEBUG GetHTML  - "American Internat"
+278  2014-10-16 22:45:05,621 [main] DEBUG GetHTML  - End   out->sysout
+279  2014-10-16 22:45:05,622 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+279  2014-10-16 22:45:05,622 [main] INFO  GetHTML  - Time: Ending   (main)
+0    2014-10-17 21:14:39,438 [main] INFO  GetHTML  - Time: Starting (main)
+5056 2014-10-17 21:14:44,494 [main] ERROR GetHTML  - Error: Can not issue data manipulation statements with executeQuery().
+5058 2014-10-17 21:14:44,496 [main] DEBUG GetHTML  - CommandLineParms: URLs 3 left most chars sLeftMostCommandLineParameter=-U=
+5058 2014-10-17 21:14:44,496 [main] DEBUG GetHTML  - CommandLineParms: URLs sCommandLineParameter=-U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+5058 2014-10-17 21:14:44,496 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+0    2014-10-17 21:15:57,776 [main] INFO  GetHTML  - Time: Starting (main)
+89710 2014-10-17 21:16:09,148 [main] ERROR GetHTML  - Error:  Problem reading HTML, with url http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv. IOException
+89711 2014-10-17 21:16:09,149 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv iReturn=0(1 is successful)
+89711 2014-10-17 21:16:09,149 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+89711 2014-10-17 21:16:09,149 [main] INFO  GetHTML  - Time: Ending   (main)
+0    2014-10-17 21:22:02,202 [main] INFO  GetHTML  - Time: Starting (main)
+385131 2014-10-17 21:28:27,333 [main] ERROR GetHTML  - Error: Can not issue data manipulation statements with executeQuery().
+385132 2014-10-17 21:28:27,334 [main] DEBUG GetHTML  - CommandLineParms: URLs 3 left most chars sLeftMostCommandLineParameter=-U=
+385132 2014-10-17 21:28:27,334 [main] DEBUG GetHTML  - CommandLineParms: URLs sCommandLineParameter=-U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+385132 2014-10-17 21:28:27,334 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+0    2014-10-17 21:31:32,261 [main] INFO  GetHTML  - Time: Starting (main)
+0    2014-10-17 21:33:27,835 [main] INFO  GetHTML  - Time: Starting (main)
+3171 2014-10-17 21:33:31,006 [main] DEBUG GetHTML  - CommandLineParms: URLs 3 left most chars sLeftMostCommandLineParameter=-U=
+3171 2014-10-17 21:33:31,006 [main] DEBUG GetHTML  - CommandLineParms: URLs sCommandLineParameter=-U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+3171 2014-10-17 21:33:31,006 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+8854 2014-10-17 21:33:36,689 [main] ERROR GetHTML  - Error:  Problem reading HTML, with url http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv. IOException
+8854 2014-10-17 21:33:36,689 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv iReturn=0(1 is successful)
+8854 2014-10-17 21:33:36,689 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+8854 2014-10-17 21:33:36,689 [main] INFO  GetHTML  - Time: Ending   (main)
+0    2014-10-20 10:17:40,274 [main] INFO  GetHTML  - Time: Starting (main)
+222  2014-10-20 10:17:40,496 [main] ERROR GetHTML  - Error: Can not issue data manipulation statements with executeQuery().
+222  2014-10-20 10:17:40,496 [main] DEBUG GetHTML  - CommandLineParms: URLs 3 left most chars sLeftMostCommandLineParameter=-U=
+223  2014-10-20 10:17:40,497 [main] DEBUG GetHTML  - CommandLineParms: URLs sCommandLineParameter=-U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+223  2014-10-20 10:17:40,497 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+232  2014-10-20 10:17:40,506 [main] ERROR GetHTML  - Error:  Problem reading HTML, with url http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv. IOException
+232  2014-10-20 10:17:40,506 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv iReturn=0(1 is successful)
+232  2014-10-20 10:17:40,506 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+232  2014-10-20 10:17:40,506 [main] INFO  GetHTML  - Time: Ending   (main)
+0    2014-10-20 10:18:28,104 [main] INFO  GetHTML  - Time: Starting (main)
+224  2014-10-20 10:18:28,328 [main] ERROR GetHTML  - Error: Can not issue data manipulation statements with executeQuery().
+224  2014-10-20 10:18:28,328 [main] DEBUG GetHTML  - CommandLineParms: URLs 3 left most chars sLeftMostCommandLineParameter=-U=
+225  2014-10-20 10:18:28,329 [main] DEBUG GetHTML  - CommandLineParms: URLs sCommandLineParameter=-U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+225  2014-10-20 10:18:28,329 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+230  2014-10-20 10:18:28,334 [main] ERROR GetHTML  - Error:  Problem reading HTML, with url http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv. IOException
+231  2014-10-20 10:18:28,335 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv iReturn=0(1 is successful)
+231  2014-10-20 10:18:28,335 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+231  2014-10-20 10:18:28,335 [main] INFO  GetHTML  - Time: Ending   (main)
+0    2014-10-20 10:18:53,017 [main] INFO  GetHTML  - Time: Starting (main)
+187  2014-10-20 10:18:53,204 [main] ERROR GetHTML  - Error: Table 'abc3' already exists
+188  2014-10-20 10:18:53,205 [main] DEBUG GetHTML  - CommandLineParms: URLs 3 left most chars sLeftMostCommandLineParameter=-U=
+188  2014-10-20 10:18:53,205 [main] DEBUG GetHTML  - CommandLineParms: URLs sCommandLineParameter=-U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+188  2014-10-20 10:18:53,205 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+194  2014-10-20 10:18:53,211 [main] ERROR GetHTML  - Error:  Problem reading HTML, with url http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv. IOException
+194  2014-10-20 10:18:53,211 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv iReturn=0(1 is successful)
+194  2014-10-20 10:18:53,211 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+194  2014-10-20 10:18:53,211 [main] INFO  GetHTML  - Time: Ending   (main)
+0    2014-10-20 10:19:15,054 [main] INFO  GetHTML  - Time: Starting (main)
+208  2014-10-20 10:19:15,262 [main] ERROR GetHTML  - Error: null
+209  2014-10-20 10:19:15,263 [main] DEBUG GetHTML  - CommandLineParms: URLs 3 left most chars sLeftMostCommandLineParameter=-U=
+209  2014-10-20 10:19:15,263 [main] DEBUG GetHTML  - CommandLineParms: URLs sCommandLineParameter=-U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+209  2014-10-20 10:19:15,263 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+216  2014-10-20 10:19:15,270 [main] ERROR GetHTML  - Error:  Problem reading HTML, with url http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv. IOException
+216  2014-10-20 10:19:15,270 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv iReturn=0(1 is successful)
+216  2014-10-20 10:19:15,270 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+216  2014-10-20 10:19:15,270 [main] INFO  GetHTML  - Time: Ending   (main)
+0    2014-10-20 10:20:23,289 [main] INFO  GetHTML  - Time: Starting (main)
+190  2014-10-20 10:20:23,479 [main] ERROR GetHTML  - Error: Table 'abc33' already exists
+191  2014-10-20 10:20:23,480 [main] DEBUG GetHTML  - CommandLineParms: URLs 3 left most chars sLeftMostCommandLineParameter=-U=
+191  2014-10-20 10:20:23,480 [main] DEBUG GetHTML  - CommandLineParms: URLs sCommandLineParameter=-U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+191  2014-10-20 10:20:23,480 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+197  2014-10-20 10:20:23,486 [main] ERROR GetHTML  - Error:  Problem reading HTML, with url http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv. IOException
+197  2014-10-20 10:20:23,486 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv iReturn=0(1 is successful)
+197  2014-10-20 10:20:23,486 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+197  2014-10-20 10:20:23,486 [main] INFO  GetHTML  - Time: Ending   (main)
+0    2014-10-20 10:20:50,252 [main] INFO  GetHTML  - Time: Starting (main)
+228  2014-10-20 10:20:50,480 [main] ERROR GetHTML  - Error: Can not issue data manipulation statements with executeQuery().
+229  2014-10-20 10:20:50,481 [main] DEBUG GetHTML  - CommandLineParms: URLs 3 left most chars sLeftMostCommandLineParameter=-U=
+229  2014-10-20 10:20:50,481 [main] DEBUG GetHTML  - CommandLineParms: URLs sCommandLineParameter=-U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+229  2014-10-20 10:20:50,481 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+235  2014-10-20 10:20:50,487 [main] ERROR GetHTML  - Error:  Problem reading HTML, with url http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv. IOException
+235  2014-10-20 10:20:50,487 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv iReturn=0(1 is successful)
+235  2014-10-20 10:20:50,487 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+235  2014-10-20 10:20:50,487 [main] INFO  GetHTML  - Time: Ending   (main)
+0    2014-10-20 10:21:24,233 [main] INFO  GetHTML  - Time: Starting (main)
+
+PJS no internet or bad signal
+235  2014-10-20 10:21:24,468 [main] DEBUG GetHTML  - CommandLineParms: URLs 3 left most chars sLeftMostCommandLineParameter=-U=
+235  2014-10-20 10:21:24,468 [main] DEBUG GetHTML  - CommandLineParms: URLs sCommandLineParameter=-U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+235  2014-10-20 10:21:24,468 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+241  2014-10-20 10:21:24,474 [main] ERROR GetHTML  - Error:  Problem reading HTML, with url http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv. IOException
+241  2014-10-20 10:21:24,474 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv iReturn=0(1 is successful)
+241  2014-10-20 10:21:24,474 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+241  2014-10-20 10:21:24,474 [main] INFO  GetHTML  - Time: Ending   (main)
+0    2014-10-22 17:32:15,100 [main] INFO  GetHTML  - Time: Starting (main)
+289  2014-10-22 17:32:15,389 [main] DEBUG GetHTML  - CommandLineParms: URLs 3 left most chars sLeftMostCommandLineParameter=-U=
+289  2014-10-22 17:32:15,389 [main] DEBUG GetHTML  - CommandLineParms: URLs sCommandLineParameter=-U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+289  2014-10-22 17:32:15,389 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+297  2014-10-22 17:32:15,397 [main] ERROR GetHTML  - Error:  Problem reading HTML, with url http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv. IOException
+297  2014-10-22 17:32:15,397 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv iReturn=0(1 is successful)
+297  2014-10-22 17:32:15,397 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+297  2014-10-22 17:32:15,397 [main] INFO  GetHTML  - Time: Ending   (main)
+0    2014-10-22 17:32:26,058 [main] INFO  GetHTML  - Time: Starting (main)
+236  2014-10-22 17:32:26,294 [main] ERROR GetHTML  - Error: Table 'mytable' already exists
+237  2014-10-22 17:32:26,295 [main] DEBUG GetHTML  - CommandLineParms: URLs 3 left most chars sLeftMostCommandLineParameter=-U=
+237  2014-10-22 17:32:26,295 [main] DEBUG GetHTML  - CommandLineParms: URLs sCommandLineParameter=-U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+237  2014-10-22 17:32:26,295 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+245  2014-10-22 17:32:26,303 [main] ERROR GetHTML  - Error:  Problem reading HTML, with url http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv. IOException
+245  2014-10-22 17:32:26,303 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv iReturn=0(1 is successful)
+245  2014-10-22 17:32:26,303 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+245  2014-10-22 17:32:26,303 [main] INFO  GetHTML  - Time: Ending   (main)
+0    2014-10-22 17:33:53,688 [main] INFO  GetHTML  - Time: Starting (main)
+0    2014-10-22 17:37:42,803 [main] INFO  GetHTML  - Time: Starting (main)
+0    2014-10-22 17:38:27,813 [main] INFO  GetHTML  - Time: Starting (main)
+63937 2014-10-22 17:39:31,750 [main] ERROR GetHTML  - SQL vendorCode=1050 Table 'mytable' already exists
+63937 2014-10-22 17:39:31,750 [main] ERROR GetHTML  - Error: Table 'mytable' already exists
+63938 2014-10-22 17:39:31,751 [main] DEBUG GetHTML  - CommandLineParms: URLs 3 left most chars sLeftMostCommandLineParameter=-U=
+63938 2014-10-22 17:39:31,751 [main] DEBUG GetHTML  - CommandLineParms: URLs sCommandLineParameter=-U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+63938 2014-10-22 17:39:31,751 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+63947 2014-10-22 17:39:31,760 [main] ERROR GetHTML  - Error:  Problem reading HTML, with url http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv. IOException
+63948 2014-10-22 17:39:31,761 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv iReturn=0(1 is successful)
+63948 2014-10-22 17:39:31,761 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+63948 2014-10-22 17:39:31,761 [main] INFO  GetHTML  - Time: Ending   (main)
+0    2014-10-24 07:29:24,441 [main] INFO  GetHTML  - Time: Starting (main)
+7741 2014-10-24 07:29:32,182 [main] ERROR GetHTML  - SQL vendorCode=1050 Table 'mytable' already exists
+7742 2014-10-24 07:29:32,183 [main] ERROR GetHTML  - Error: Table 'mytable' already exists
+7745 2014-10-24 07:29:32,186 [main] DEBUG GetHTML  - CommandLineParms: URLs 3 left most chars sLeftMostCommandLineParameter=-U=
+7745 2014-10-24 07:29:32,186 [main] DEBUG GetHTML  - CommandLineParms: URLs sCommandLineParameter=-U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+7745 2014-10-24 07:29:32,186 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+7844 2014-10-24 07:29:32,285 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv iReturn=1(1 is successful)
+7844 2014-10-24 07:29:32,285 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+7844 2014-10-24 07:29:32,285 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+12428 2014-10-24 07:29:36,869 [main] DEBUG GetHTML  - Begin out->sysout
+12429 2014-10-24 07:29:36,870 [main] DEBUG GetHTML  - "American Internat"
+12429 2014-10-24 07:29:36,870 [main] DEBUG GetHTML  - End   out->sysout
+12429 2014-10-24 07:29:36,870 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+12429 2014-10-24 07:29:36,870 [main] INFO  GetHTML  - Time: Ending   (main)
+0    2014-10-24 07:42:54,935 [main] INFO  GetHTML  - Time: Starting (main)
+1    2014-10-24 07:42:54,936 [main] DEBUG GetHTML  - CommandLineParms: URLs 3 left most chars sLeftMostCommandLineParameter=-U=
+1    2014-10-24 07:42:54,936 [main] DEBUG GetHTML  - CommandLineParms: URLs sCommandLineParameter=-U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+1    2014-10-24 07:42:54,936 [main] DEBUG GetHTML  - CommandLineParms: Output File
+2    2014-10-24 07:42:54,937 [main] DEBUG GetHTML  - Append GUID or TimeStamp to the end of the filename
+2    2014-10-24 07:42:54,937 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+94   2014-10-24 07:42:55,029 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv iReturn=1(1 is successful)
+94   2014-10-24 07:42:55,029 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+95   2014-10-24 07:42:55,030 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+95   2014-10-24 07:42:55,030 [main] DEBUG GetHTML  - Begin out->file sOutputFileName=/home/paul/workspace/dev/GetHTML/output/test.txt
+0    2014-10-24 07:44:05,447 [main] INFO  GetHTML  - Time: Starting (main)
+1    2014-10-24 07:44:05,448 [main] DEBUG GetHTML  - CommandLineParms: URLs 3 left most chars sLeftMostCommandLineParameter=-U=
+1    2014-10-24 07:44:05,448 [main] DEBUG GetHTML  - CommandLineParms: URLs sCommandLineParameter=-U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+1    2014-10-24 07:44:05,448 [main] DEBUG GetHTML  - CommandLineParms: Output File
+2    2014-10-24 07:44:05,449 [main] DEBUG GetHTML  - Append GUID or TimeStamp to the end of the filename
+2    2014-10-24 07:44:05,449 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+225  2014-10-24 07:44:05,672 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv iReturn=1(1 is successful)
+225  2014-10-24 07:44:05,672 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+225  2014-10-24 07:44:05,672 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+225  2014-10-24 07:44:05,672 [main] DEBUG GetHTML  - Begin out->file sOutputFileName=/home/paul/workspace/dev/GetHTML/output/test.txt
+0    2014-10-30 22:10:10,945 [main] INFO  GetHTML  - Time: Starting (main)
+1    2014-10-30 22:10:10,946 [main] DEBUG GetHTML  - CommandLineParms: URLs 3 left most chars sLeftMostCommandLineParameter=-U=
+2    2014-10-30 22:10:10,947 [main] DEBUG GetHTML  - CommandLineParms: URLs sCommandLineParameter=-U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+2    2014-10-30 22:10:10,947 [main] DEBUG GetHTML  - CommandLineParms: Output File
+3    2014-10-30 22:10:10,948 [main] DEBUG GetHTML  - Append GUID or TimeStamp to the end of the filename
+3    2014-10-30 22:10:10,948 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+659  2014-10-30 22:10:11,604 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv iReturn=1(1 is successful)
+659  2014-10-30 22:10:11,604 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+659  2014-10-30 22:10:11,604 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+660  2014-10-30 22:10:11,605 [main] DEBUG GetHTML  - Begin out->file sOutputFileName=/home/paul/workspace/dev/GetHTML/output/test.txt
+661  2014-10-30 22:10:11,606 [main] DEBUG GetHTML  - End  out->file sOutputFileName=/home/paul/workspace/dev/GetHTML/output/test.txt
+661  2014-10-30 22:10:11,606 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+661  2014-10-30 22:10:11,606 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -O=/home/paul/workspace/dev/GetHTML/output/test.txt
+661  2014-10-30 22:10:11,606 [main] ERROR GetHTML  - Error:  Problem with url -O=/home/paul/workspace/dev/GetHTML/output/test.txt. MalformedURLException
+661  2014-10-30 22:10:11,606 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=-O=/home/paul/workspace/dev/GetHTML/output/test.txt iReturn=0(1 is successful)
+661  2014-10-30 22:10:11,606 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -O=/home/paul/workspace/dev/GetHTML/output/test.txt
+661  2014-10-30 22:10:11,606 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -D=MMddyyyy_HH:mm:ss:SSS
+662  2014-10-30 22:10:11,607 [main] ERROR GetHTML  - Error:  Problem with url -D=MMddyyyy_HH:mm:ss:SSS. MalformedURLException
+662  2014-10-30 22:10:11,607 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=-D=MMddyyyy_HH:mm:ss:SSS iReturn=0(1 is successful)
+662  2014-10-30 22:10:11,607 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -D=MMddyyyy_HH:mm:ss:SSS
+662  2014-10-30 22:10:11,607 [main] INFO  GetHTML  - Time: Ending   (main)
+0    2014-10-30 22:10:34,624 [main] INFO  GetHTML  - Time: Starting (main)
+1    2014-10-30 22:10:34,625 [main] DEBUG GetHTML  - CommandLineParms: URLs 3 left most chars sLeftMostCommandLineParameter=-U=
+1    2014-10-30 22:10:34,625 [main] DEBUG GetHTML  - CommandLineParms: URLs sCommandLineParameter=-U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+1    2014-10-30 22:10:34,625 [main] DEBUG GetHTML  - CommandLineParms: Output File
+2    2014-10-30 22:10:34,626 [main] DEBUG GetHTML  - Append GUID or TimeStamp to the end of the filename
+2    2014-10-30 22:10:34,626 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+96   2014-10-30 22:10:34,720 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv iReturn=1(1 is successful)
+96   2014-10-30 22:10:34,720 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+96   2014-10-30 22:10:34,720 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+96   2014-10-30 22:10:34,720 [main] DEBUG GetHTML  - Begin out->file sOutputFileName=/home/paul/workspace/dev/GetHTML/output/test.txt
+97   2014-10-30 22:10:34,721 [main] DEBUG GetHTML  - End  out->file sOutputFileName=/home/paul/workspace/dev/GetHTML/output/test.txt
+97   2014-10-30 22:10:34,721 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+97   2014-10-30 22:10:34,721 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -O=/home/paul/workspace/dev/GetHTML/output/test.txt
+97   2014-10-30 22:10:34,721 [main] ERROR GetHTML  - Error:  Problem with url -O=/home/paul/workspace/dev/GetHTML/output/test.txt. MalformedURLException
+97   2014-10-30 22:10:34,721 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=-O=/home/paul/workspace/dev/GetHTML/output/test.txt iReturn=0(1 is successful)
+98   2014-10-30 22:10:34,722 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -O=/home/paul/workspace/dev/GetHTML/output/test.txt
+98   2014-10-30 22:10:34,722 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -D=MMddyyyy_HH:mm:ss:SSS
+98   2014-10-30 22:10:34,722 [main] ERROR GetHTML  - Error:  Problem with url -D=MMddyyyy_HH:mm:ss:SSS. MalformedURLException
+98   2014-10-30 22:10:34,722 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=-D=MMddyyyy_HH:mm:ss:SSS iReturn=0(1 is successful)
+98   2014-10-30 22:10:34,722 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -D=MMddyyyy_HH:mm:ss:SSS
+98   2014-10-30 22:10:34,722 [main] INFO  GetHTML  - Time: Ending   (main)
+0    2014-10-30 22:10:45,252 [main] INFO  GetHTML  - Time: Starting (main)
+1    2014-10-30 22:10:45,253 [main] DEBUG GetHTML  - CommandLineParms: URLs 3 left most chars sLeftMostCommandLineParameter=-U=
+1    2014-10-30 22:10:45,253 [main] DEBUG GetHTML  - CommandLineParms: URLs sCommandLineParameter=-U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+1    2014-10-30 22:10:45,253 [main] DEBUG GetHTML  - CommandLineParms: Output File
+3    2014-10-30 22:10:45,255 [main] DEBUG GetHTML  - Append GUID or TimeStamp to the end of the filename
+3    2014-10-30 22:10:45,255 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+92   2014-10-30 22:10:45,344 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv iReturn=1(1 is successful)
+92   2014-10-30 22:10:45,344 [main] DEBUG GetHTML  - Completed:getHTML HTTP get was successful
+93   2014-10-30 22:10:45,345 [main] DEBUG GetHTML  - Completed:getHTML response length=19
+93   2014-10-30 22:10:45,345 [main] DEBUG GetHTML  - Begin out->file sOutputFileName=/home/paul/workspace/dev/GetHTML/output/test.txt
+93   2014-10-30 22:10:45,345 [main] DEBUG GetHTML  - End  out->file sOutputFileName=/home/paul/workspace/dev/GetHTML/output/test.txt
+93   2014-10-30 22:10:45,345 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -U=http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv
+93   2014-10-30 22:10:45,345 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -O=/home/paul/workspace/dev/GetHTML/output/test.txt
+93   2014-10-30 22:10:45,345 [main] ERROR GetHTML  - Error:  Problem with url -O=/home/paul/workspace/dev/GetHTML/output/test.txt. MalformedURLException
+93   2014-10-30 22:10:45,345 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=-O=/home/paul/workspace/dev/GetHTML/output/test.txt iReturn=0(1 is successful)
+93   2014-10-30 22:10:45,345 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -O=/home/paul/workspace/dev/GetHTML/output/test.txt
+93   2014-10-30 22:10:45,345 [main] INFO  GetHTML  - Time: Staring getHTML (main) Starting -D=MMddyyyy_HH:mm:ss:SSS
+94   2014-10-30 22:10:45,346 [main] ERROR GetHTML  - Error:  Problem with url -D=MMddyyyy_HH:mm:ss:SSS. MalformedURLException
+94   2014-10-30 22:10:45,346 [main] DEBUG GetHTML  - Completed:getHTML sLocalURL=-D=MMddyyyy_HH:mm:ss:SSS iReturn=0(1 is successful)
+94   2014-10-30 22:10:45,346 [main] INFO  GetHTML  - Time: Ending  getHTML (main) Ending   -D=MMddyyyy_HH:mm:ss:SSS
+94   2014-10-30 22:10:45,346 [main] INFO  GetHTML  - Time: Ending   (main)
