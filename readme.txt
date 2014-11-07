@@ -57,3 +57,21 @@ java -Dlog4j.configuration=file:"/home/paul/workspace/dev/GetHTML/properties/log
 
 
 
+mysql -u sqluser -p
+Enter password: 
+
+mysql> use feedback
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+Database changed
+
+mysql> select * from HistoricalStockPrice;
++------------+-----------+-----------+---------+---------+----------+----------+--------+
+| MarketDate | OpenPrice | HighPrice | Low     | Close   | Volume   | AdjClose | Symbol |
++------------+-----------+-----------+---------+---------+----------+----------+--------+
+| 2014-10-31 |   46.1600 |   46.5200 | 45.6700 | 46.0500 | 18434300 |  46.0500 | INTC   |
++------------+-----------+-----------+---------+---------+----------+----------+--------+
+1 row in set (0.00 sec)
+
+
+

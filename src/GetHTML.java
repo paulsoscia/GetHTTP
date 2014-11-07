@@ -28,22 +28,36 @@ public class GetHTML {
 	//static String	sURL					= "http://www.bing.com/";	// A valid URL
 	//																				&a=09(zero based October) &b=8 (8th and later)
 	//
-	
-	public static final	String	sUrlYahooFinanceIntelHistorical = "http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=8&c=2014";
-	public static final	String	sUrlYahooFinanceStockName		= "http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv";
-	public static final	String	sURL							= sUrlYahooFinanceStockName;
-	public static final	String	sEmptyString = "";
+	public static final String 	sUrlYahooStockSymbol					= "$$$SYMBOL$$$";
+	public static final String 	sUrlYahooStartingMonth					= "$$$STARTMONTH$$$";
+	public static final String 	sUrlYahooStartingYear					= "$$$STARTYEAR$$$";
+	public static final String 	sUrlYahooStartingDay					= "$$$STARTDAY$$$";
+	public static final String 	sUrlYahooEndingMonth					= "$$$ENDMONTH$$$";
+	public static final String 	sUrlYahooEndingYear						= "$$$ENDYEAR$$$";
+	public static final String 	sUrlYahooEndingDay						= "$$$ENDDAY$$$";
+		
+	public static final String 	sUrlYahooFinanceHistorical 				= "http://ichart.finance.yahoo.com";
+	public static final	String	sUrlYahooFinanceIntelHistorical 		= sUrlYahooFinanceHistorical + "/table.csv?s=INTC&a=9&b=31&c=2014";  										   
+	public static String	sUrlYahooFinanceIntelHistoricalGeneric 	= sUrlYahooFinanceHistorical + "/table.csv?s=" + sUrlYahooStockSymbol + "&d=" + sUrlYahooEndingMonth + "&e=" + sUrlYahooEndingDay + "&f=" + sUrlYahooEndingYear + "&g=d&a=" + sUrlYahooStartingMonth + "&b=" + sUrlYahooStartingDay + "&c=" + sUrlYahooStartingYear + "&ignore=.csv"; 
+
+	public static final	String	sUrlYahooFinanceStockName				= "http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv";
+	public static final	String	sURL									= sUrlYahooFinanceStockName;
+	public static final	String	sEmptyString 							= "";
+	public static final String	sUrlYahooHistoricalHeader 				= "Date,Open,High,Low,Close,Volume,Adj Close";
 	
 	public static final	String sLeftThreeHTTP 					= "HTT";
 	public static final	String sCommandLineParmsOutputSysOut	= "SYSOUT";	
 	public static final	String sCommandLineParmsUrls			= "-U=";
-	public static final	String sCommandLineParmsOutput 			= "-O=";
+	public static final	String sCommandLineParmsOutputFile 		= "-O=";
 	public static final	String sCommandLineParmsDateFormat 		= "-D=";
-	public static final	String sCommandLineParmsInput 			= "-I=";	// NOT supported
-	public static final	String sCommandLineParmsHelp 			= "-H";		// NOT supported
+	public static final	String sCommandLineParmsInput 			= "-I=";		// NOT supported
+	public static final	String sCommandLineParmsHelp 			= "-H=";		// NOT supported
+	public static final	String sCommandLineParmsHelpAlt 		= "-?=";		// NOT supported
+	public static final	String sCommandLineParmsOutputDB 		= "-B=";		// NOT supported
 	
 	private static		String 	sOutputFileName 				= "";
 	private static		Boolean bOutputFile 					= Boolean.FALSE;
+	private static		Boolean bOutputDB	 					= Boolean.FALSE;
 	private static		Boolean bOutputFileWithTimeStamp 		= Boolean.FALSE;
 	
 	private static		String		sFileNameDateFormat			= 	"yyyyMMdd_HH:mm:ss:SSS";
@@ -57,7 +71,60 @@ public class GetHTML {
 	private 			Connection			connect 			= null;
 	private 			Statement 			statement 			= null;
 	private 			PreparedStatement 	preparedStatement 	= null;
-	private 			ResultSet 			resultSet 			= null;
+	private 			ResultSet 			resultSet 			= null;	
+
+	protected static String setsFileNameDateFormatYahooFinance(
+			String sFileNameDateFormatYahooFinance, String sSymbol, String sDay, String sMonth, String sYear) {
+		String sLocalFileNameDateFormatYahooFinance;
+		sLocalFileNameDateFormatYahooFinance = sFileNameDateFormatYahooFinance.replace(sUrlYahooStockSymbol, sSymbol);
+		sLocalFileNameDateFormatYahooFinance = sLocalFileNameDateFormatYahooFinance.replace(sUrlYahooEndingDay, sDay);
+		sLocalFileNameDateFormatYahooFinance = sLocalFileNameDateFormatYahooFinance.replace(sUrlYahooStartingDay, sDay);
+		sLocalFileNameDateFormatYahooFinance = sLocalFileNameDateFormatYahooFinance.replace(sUrlYahooEndingMonth, sMonth);
+		sLocalFileNameDateFormatYahooFinance = sLocalFileNameDateFormatYahooFinance.replace(sUrlYahooStartingMonth, sMonth);
+		sLocalFileNameDateFormatYahooFinance = sLocalFileNameDateFormatYahooFinance.replace(sUrlYahooEndingYear, sYear);
+		sLocalFileNameDateFormatYahooFinance = sLocalFileNameDateFormatYahooFinance.replace(sUrlYahooStartingYear, sYear);
+		return(sLocalFileNameDateFormatYahooFinance);
+	}	
+	
+	protected static void setsFileNameDateFormatYahooFinance(
+			String sFileNameDateFormatYahooFinance, String sSymbol, String sStartingDay, String sStartingMonth, String sStartingYear,String sEndingDay, String sEndingMonth, String sEndingYear) {
+		GetHTML.sFileNameDateFormatYahooFinance = sFileNameDateFormatYahooFinance.replaceAll(sUrlYahooStockSymbol, sSymbol);
+		GetHTML.sFileNameDateFormatYahooFinance = sFileNameDateFormatYahooFinance.replaceAll(sUrlYahooEndingDay, sEndingDay);
+		GetHTML.sFileNameDateFormatYahooFinance = sFileNameDateFormatYahooFinance.replaceAll(sUrlYahooStartingDay, sStartingDay);
+		GetHTML.sFileNameDateFormatYahooFinance = sFileNameDateFormatYahooFinance.replaceAll(sUrlYahooEndingMonth, sEndingMonth);
+		GetHTML.sFileNameDateFormatYahooFinance = sFileNameDateFormatYahooFinance.replaceAll(sUrlYahooStartingMonth, sStartingMonth);
+		GetHTML.sFileNameDateFormatYahooFinance = sFileNameDateFormatYahooFinance.replaceAll(sUrlYahooEndingYear, sEndingYear);
+		GetHTML.sFileNameDateFormatYahooFinance = sFileNameDateFormatYahooFinance.replaceAll(sUrlYahooStartingYear, sStartingYear);
+
+	}	
+	/**
+	 * @return the bOutputDB
+	 */
+	protected static Boolean getbOutputDB() {
+		return bOutputDB;
+	}
+
+	/**
+	 * @param bOutputDB the bOutputDB to set
+	 */
+	protected static void setbOutputDB(Boolean bOutputDB) {
+		GetHTML.bOutputDB = bOutputDB;
+	}
+
+	/**
+	 * @return the bOutputFileWithTimeStamp
+	 */
+	protected static Boolean getbOutputFileWithTimeStamp() {
+		return bOutputFileWithTimeStamp;
+	}
+
+	/**
+	 * @param bOutputFileWithTimeStamp the bOutputFileWithTimeStamp to set
+	 */
+	protected static void setbOutputFileWithTimeStamp(
+			Boolean bOutputFileWithTimeStamp) {
+		GetHTML.bOutputFileWithTimeStamp = bOutputFileWithTimeStamp;
+	}
 	
 	public static String getsFileNameDateFormat() {
 		return sFileNameDateFormat;
@@ -99,7 +166,7 @@ public class GetHTML {
 		GetHTML.bOutputFile = bOutputFile;
 	}
 	
-	public void LastBusinessDay()
+	public void previousBusinessDay()
 	{
 		//TODO add holiday support ; add before 5PM logic to check previous business day
 		Boolean isHoliday; 
@@ -125,12 +192,8 @@ public class GetHTML {
 	      Class.forName("com.mysql.jdbc.Driver");
 	      // setup the connection with the DB.
 	      connect = DriverManager.getConnection("jdbc:mysql://localhost/feedback?" + "user=sqluser&password=sqluserpw"); //"user=root&password=12many");
-
 	      
-	      // preparedStatements can use variables and are more efficient
-	      preparedStatement = connect.prepareStatement("create table mytable (a integer, b varchar(100), c long, prime varchar(2), tictac varchar(9) )");
-	      // "myuser, webpage, datum, summary, COMMENTS from FEEDBACK.COMMENTS");
-	      // parameters start with 1
+	      preparedStatement = connect.prepareStatement("CREATE TABLE HistoricalStockPrice (MarketDate Date not null, OpenPrice DECIMAL(18,4), HighPrice DECIMAL(18,4), Low DECIMAL(18,4), Close DECIMAL(18,4), Volume	BIGINT, AdjClose DECIMAL(18,4), Symbol varchar(5))");
 	      preparedStatement.executeUpdate();
 
 	      
@@ -145,16 +208,45 @@ public class GetHTML {
 	    }
 
 	  }
-		
 
+	public void writeDbInsertHistoricalStockPrice(String sInsertValues) throws Exception {
+		
+		String sSqlStatement = "";
+		
+		try {
+	      // this will load the MySQL driver, each DB has its own driver
+	      Class.forName("com.mysql.jdbc.Driver");
+	      // setup the connection with the DB.
+	      connect = DriverManager.getConnection("jdbc:mysql://localhost/feedback?" + "user=sqluser&password=sqluserpw"); //"user=root&password=12many");
+	      sSqlStatement =  "INSERT INTO HistoricalStockPrice ";
+	      sSqlStatement += " (MarketDate, OpenPrice, HighPrice, Low, Close, Volume, AdjClose, Symbol) ";
+	      sSqlStatement += " VALUES ";
+	      sSqlStatement += " ( " + sInsertValues + " ) " ;
+	      preparedStatement = connect.prepareStatement(sSqlStatement);
+	      preparedStatement.executeUpdate();
+
+	      
+	    } catch (Exception e) {
+	    	//if (e.vendorCode == 1050)
+	    	{
+	    		log.error("error with this SQL prepare or execute " + sSqlStatement);
+	    		log.error("SQL vendorCode=1050 " + e.getMessage());
+	    	}
+	    	throw e;
+	    } finally {
+	      close();
+	    }
+
+	  }	
+	
 		  // you need to close all three to make sure
 		  private void close() {
-		    //close(resultSet);
-		    //close(statement);
-		    //close(connect);
+		    close(resultSet);
+		    close(statement);
+		    close(connect);
 		  }
 		  
-		  public void close(Closeable c) {
+		  private void close(ResultSet c) {
 		    try {
 		      if (c != null) {
 		        c.close();
@@ -163,6 +255,26 @@ public class GetHTML {
 		    // don't throw now as it might leave following closables in undefined state
 		    }
 		  }	
+
+		  private void close(Statement c) {
+			    try {
+			      if (c != null) {
+			        c.close();
+			      }
+			    } catch (Exception e) {
+			    // don't throw now as it might leave following closables in undefined state
+			    }
+			  }
+		  
+		  private void close(Connection c) {
+			    try {
+			      if (c != null) {
+			        c.close();
+			      }
+			    } catch (Exception e) {
+			    // don't throw now as it might leave following closables in undefined state
+			    }
+			  }		  
 	// END   JDBC
 	
 	public void writeFile(String sPathAndFileName, String sDataToWriteToFile) {
@@ -170,7 +282,7 @@ public class GetHTML {
 		dfFileNameDateFormat = new SimpleDateFormat(sFileNameDateFormat);
 		dfFileNameDateFormatYahooFinance = new SimpleDateFormat(sFileNameDateFormatYahooFinance);
 		sPathAndFileName = sPathAndFileName.replace(".", dfFileNameDateFormat.format(dtFileNameDate) + ".");
-		
+		log.debug("File Name=sPathAndFileName=" + sPathAndFileName);
 		BufferedWriter writer = null;
 		try
 		{
@@ -181,7 +293,7 @@ public class GetHTML {
 		}
 		catch ( IOException e)
 		{
-			log.error("Error New or write to file " + e.getMessage());
+			log.error("Error New or write to file " + e.getMessage() + " sPathAndFileName=" + sPathAndFileName);
 			e.printStackTrace();
 		}
 		finally
@@ -193,7 +305,7 @@ public class GetHTML {
 		    }
 		    catch ( IOException e)
 		    {
-		    	log.error("Error closing file " + e.getMessage());
+		    	log.error("Error closing file " + e.getMessage() + " sPathAndFileName=" + sPathAndFileName);
 		    	e.printStackTrace();
 		    }
 		}
@@ -253,8 +365,37 @@ public class GetHTML {
 				writeFile(sOutputFileName, sHTTpResponseLines);
 				log.debug("End  out->file sOutputFileName=" + sOutputFileName);
 			}
+
+			if ((bOutputDB) && (sLocalURL.contains(sUrlYahooFinanceHistorical)) )
+			{
+				log.debug("Begin out->DB ");
+				try {
+					String sOneLineInserts = sHTTpResponseLines;
+					sOneLineInserts = sOneLineInserts.replaceAll(sUrlYahooHistoricalHeader, "");
+					sOneLineInserts = sOneLineInserts + ",INTC";
+					//1/0
+					sOneLineInserts = sOneLineInserts.replaceAll("\n", "' , '");
+					sOneLineInserts = sOneLineInserts.replaceAll("\r", "' , '");
+					sOneLineInserts = " '" + sOneLineInserts.replaceAll(",", "','") + "' ";
+					writeDbInsertHistoricalStockPrice(sOneLineInserts);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					log.error(e);
+					e.printStackTrace();
+				}
+				log.debug("End  out->DB ");
+			}
 		}
 				
+	}
+
+	private static boolean validURL(String sCommandLineParameter) {
+		// TODO Auto-generated method stub
+		if ( (sCommandLineParameter.substring(0,3).equalsIgnoreCase(sCommandLineParmsUrls)) || (sCommandLineParameter.substring(0,3).equalsIgnoreCase(sLeftThreeHTTP)) )
+		{
+			return true;
+		}
+		return false;
 	}
 	
 	public static String[] commandlineParms(String[] args)
@@ -277,11 +418,17 @@ public class GetHTML {
 		
 		for (String sCommandLineParameter: strArrCommandLineParms) {
 			sCommandLineParameter = sCommandLineParameter.trim();
-			String sLeftMostCommandLineParameter = sCommandLineParameter.substring(0,3);
+			Integer iCommandLineParameterLength = sCommandLineParameter.length();
+			Integer iSubStringLength = 3;
+			if (iSubStringLength > iCommandLineParameterLength)
+			{
+				iSubStringLength = iCommandLineParameterLength;
+			}
+			String sLeftMostCommandLineParameter = sCommandLineParameter.substring(0,iSubStringLength);
 			if (sLeftMostCommandLineParameter.equalsIgnoreCase(sLeftThreeHTTP))
 			{
 				sCommandLineParameter = sCommandLineParmsUrls + sCommandLineParameter;
-				sLeftMostCommandLineParameter = sCommandLineParameter.substring(0,3);
+				sLeftMostCommandLineParameter = sCommandLineParameter.substring(0,iSubStringLength);
 			}
 
 			    if (sLeftMostCommandLineParameter.equalsIgnoreCase(sCommandLineParmsUrls)) { 
@@ -291,22 +438,23 @@ public class GetHTML {
 			    if (sLeftMostCommandLineParameter.equalsIgnoreCase("-I=")) { 
 			    	log.debug("CommandLineParms: Input File");
 			    }
-			    if (sLeftMostCommandLineParameter.equalsIgnoreCase(sCommandLineParmsOutput)) {
+			    if (sLeftMostCommandLineParameter.equalsIgnoreCase(sCommandLineParmsOutputFile)) {
 			    	log.debug("CommandLineParms: Output File");
 			    	bOutputFile = Boolean.TRUE;
-			    	sOutputFileName = sCommandLineParameter.replace(sCommandLineParmsOutput, "");
+			    	sOutputFileName = sCommandLineParameter.replace(sCommandLineParmsOutputFile, "");
 			    }
-			    if (sLeftMostCommandLineParameter.equalsIgnoreCase("-?")) { 
-			    	log.debug("CommandLineParms: Help");
-			    }
-			    if (sLeftMostCommandLineParameter.equalsIgnoreCase("-H")) {
+			    if (sLeftMostCommandLineParameter.equalsIgnoreCase("-B=")) {
+			    	log.debug("CommandLineParms: Output DB");
+			    	bOutputDB = Boolean.TRUE;
+			    }			    
+			    if ( (sLeftMostCommandLineParameter.equals("-?")) || (sLeftMostCommandLineParameter.equalsIgnoreCase("-H")) ) { 
 			    	log.debug("CommandLineParms: Help");
 			    }
 			    if (sLeftMostCommandLineParameter.equalsIgnoreCase(sCommandLineParmsDateFormat)) {
 			    	log.debug("Append GUID or TimeStamp to the end of the filename");
 			    	sFileNameDateFormat =sCommandLineParameter.replace(sCommandLineParmsDateFormat, "");
 			    }
-			    if (sLeftMostCommandLineParameter.equalsIgnoreCase("dffdf")) {
+			    if (sLeftMostCommandLineParameter.equalsIgnoreCase("XXX")) {
 			    	log.warn("CommandLineParms: Invalid Command Line parm");
 			    }
 		}
@@ -326,12 +474,33 @@ public class GetHTML {
 		String[] sListURLs = commandlineParms(args);
 		GetHTML getHtmlgetPage = new GetHTML();
 		
+		//getHtmlgetPage.connect();
+		try {
+			//getHtmlgetPage.createTables();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			log.error(e);
+			StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
+			for(StackTraceElement stackTrace: stackTraceElements){
+			    log.error(stackTrace.getClassName()+ "  "+ stackTrace.getMethodName()+" "+stackTrace.getLineNumber());
+			}
+			e.printStackTrace();
+		}
+		
 		for (String sCommandLineParameter: sListURLs) {
 			log.info("Time: Staring getHTML (main) Starting " + sCommandLineParameter );
-			getHtmlgetPage.getHTML(sCommandLineParameter);
+			if (validURL(sCommandLineParameter))
+			{
+				getHtmlgetPage.getHTML(sCommandLineParameter);
+			}
 			log.info("Time: Ending  getHTML (main) Ending   " + sCommandLineParameter);
 		}
+		String sLocalUrlYahooFinanceIntelHistoricalGeneric = setsFileNameDateFormatYahooFinance(sUrlYahooFinanceIntelHistoricalGeneric,"INTC","31","09","2014");
+		log.info("sLocalUrlYahooFinanceIntelHistoricalGeneric=" + sLocalUrlYahooFinanceIntelHistoricalGeneric);
+		getHtmlgetPage.getHTML("-U=" + sLocalUrlYahooFinanceIntelHistoricalGeneric);
+
 		log.info("Time: Ending   (main)" );
 	} // main end
+
 
 }
