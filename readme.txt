@@ -29,6 +29,10 @@ java -Dlog4j.configuration=file:"/home/paul/workspace/dev/GetHTML/properties/log
 (B) with -O you can use -D
 java -Dlog4j.configuration=file:"/home/paul/workspace/dev/GetHTML/properties/log4j.properties" -classpath /home/paul/workspace/dev/GetHTML/libs/log4j-1.2.17.jar:. GetHTML http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014 http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014 -O=/home/paul/workspace/dev/GetHTML/output/test.txt -D=MMddyyyy_HH:mm:ss:SSS
 
+-B example which writes to the DB and to the file system; only daily history values are supported with the -B parameter (using the URL http://ichart.finance.yahoo.com/table.csv?) 
+
+-U=http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv -U=http://ichart.finance.yahoo.com/table.csv?s=YHOO&d=9&e=31&f=2014&g=d&a=9&b=31&c=2014&ignore=.csv -O=/home/paul/workspace/dev/GetHTML/output/test.txt -D=MMddyyyy_HH:mm:ss -B=Yes
+
 URLs
 
 Example 
@@ -50,12 +54,11 @@ Example
 
 http://download.finance.yahoo.com/d/[FILENAME]?s=[TICKERSYMBOLS]&f=[TAGS]&e=.csv 
 
-
-
 example
 java -Dlog4j.configuration=file:"/home/paul/workspace/dev/GetHTML/properties/log4j.properties" -classpath /home/paul/workspace/dev/GetHTML/libs/log4j-1.2.17.jar:. GetHTML http://download.finance.yahoo.com/d/quotes.txt?s=INTC&f=n&e=.csv http://ichart.finance.yahoo.com/table.csv?s=INTC&a=09&b=10&c=2014 http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv http://ichart.finance.yahoo.com/table.csv?s=AIG&a=09&b=10&c=2014 -O=/home/paul/workspace/dev/GetHTML/output/test.txt -D=MMddyyyy_HH:mm:ss:SSS
 
 
+Database Notes
 
 mysql -u sqluser -p
 Enter password: 

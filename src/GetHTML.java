@@ -24,10 +24,10 @@ import org.apache.log4j.Logger;
 
 public class GetHTML {
 
-	static Logger	log						= Logger.getLogger(GetHTML.class.getName());
-	//static String	sURL					= "http://www.bing.com/";	// A valid URL
-	//																				&a=09(zero based October) &b=8 (8th and later)
-	//
+	static Logger				log										= Logger.getLogger(GetHTML.class.getName());
+    public static final String	ClassNameJdbcMySQL						= "com.mysql.jdbc.Driver";
+    public static final String	ClassNameP6SpyJdbcMySQL					= "com.p6spy.engine.spy.P6SpyDriver";
+    
 	public static final String 	sUrlYahooStockSymbol					= "$$$SYMBOL$$$";
 	public static final String 	sUrlYahooStartingMonth					= "$$$STARTMONTH$$$";
 	public static final String 	sUrlYahooStartingYear					= "$$$STARTYEAR$$$";
@@ -37,11 +37,12 @@ public class GetHTML {
 	public static final String 	sUrlYahooEndingDay						= "$$$ENDDAY$$$";
 		
 	public static final String 	sUrlYahooFinanceHistorical 				= "http://ichart.finance.yahoo.com";
+	//																													  &a=9(zero based October=9, November=10)
 	public static final	String	sUrlYahooFinanceIntelHistorical 		= sUrlYahooFinanceHistorical + "/table.csv?s=INTC&a=9&b=31&c=2014";  										   
-	public static String	sUrlYahooFinanceIntelHistoricalGeneric 	= sUrlYahooFinanceHistorical + "/table.csv?s=" + sUrlYahooStockSymbol + "&d=" + sUrlYahooEndingMonth + "&e=" + sUrlYahooEndingDay + "&f=" + sUrlYahooEndingYear + "&g=d&a=" + sUrlYahooStartingMonth + "&b=" + sUrlYahooStartingDay + "&c=" + sUrlYahooStartingYear + "&ignore=.csv"; 
-
+	public static String		sUrlYahooFinanceHistoricalGeneric 		= sUrlYahooFinanceHistorical + "/table.csv?s=" + sUrlYahooStockSymbol + "&d=" + sUrlYahooEndingMonth + "&e=" + sUrlYahooEndingDay + "&f=" + sUrlYahooEndingYear + "&g=d&a=" + sUrlYahooStartingMonth + "&b=" + sUrlYahooStartingDay + "&c=" + sUrlYahooStartingYear + "&ignore=.csv"; 
 	public static final	String	sUrlYahooFinanceStockName				= "http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv";
 	public static final	String	sURL									= sUrlYahooFinanceStockName;
+	
 	public static final	String	sEmptyString 							= "";
 	public static final String	sUrlYahooHistoricalHeader 				= "Date,Open,High,Low,Close,Volume,Adj Close";
 	
@@ -59,6 +60,7 @@ public class GetHTML {
 	private static		Boolean bOutputFile 					= Boolean.FALSE;
 	private static		Boolean bOutputDB	 					= Boolean.FALSE;
 	private static		Boolean bOutputFileWithTimeStamp 		= Boolean.FALSE;
+	private static		Boolean bTraceSqlWithP6Spy 				= Boolean.TRUE;
 	
 	private static		String		sFileNameDateFormat			= 	"yyyyMMdd_HH:mm:ss:SSS";
 	private static		Date   		dtFileNameDate				=	new Date();
@@ -72,9 +74,13 @@ public class GetHTML {
 	private 			Statement 			statement 			= null;
 	private 			PreparedStatement 	preparedStatement 	= null;
 	private 			ResultSet 			resultSet 			= null;	
+	
+	public static				String 				StockSymbol			= "";
+	
+	//jdbc:p6spy:mysql://localhost/feedback?" + "user=sqluser&password=sqluserpw
 
 	protected static String setsFileNameDateFormatYahooFinance(
-			String sFileNameDateFormatYahooFinance, String sSymbol, String sDay, String sMonth, String sYear) {
+			String sFileNameDateFormatYahooFinance, String sSymbol,  String sMonth, String sDay, String sYear) {
 		String sLocalFileNameDateFormatYahooFinance;
 		sLocalFileNameDateFormatYahooFinance = sFileNameDateFormatYahooFinance.replace(sUrlYahooStockSymbol, sSymbol);
 		sLocalFileNameDateFormatYahooFinance = sLocalFileNameDateFormatYahooFinance.replace(sUrlYahooEndingDay, sDay);
@@ -87,7 +93,7 @@ public class GetHTML {
 	}	
 	
 	protected static void setsFileNameDateFormatYahooFinance(
-			String sFileNameDateFormatYahooFinance, String sSymbol, String sStartingDay, String sStartingMonth, String sStartingYear,String sEndingDay, String sEndingMonth, String sEndingYear) {
+			String sFileNameDateFormatYahooFinance, String sSymbol,  String sStartingMonth, String sStartingDay, String sStartingYear, String sEndingMonth,String sEndingDay, String sEndingYear) {
 		GetHTML.sFileNameDateFormatYahooFinance = sFileNameDateFormatYahooFinance.replaceAll(sUrlYahooStockSymbol, sSymbol);
 		GetHTML.sFileNameDateFormatYahooFinance = sFileNameDateFormatYahooFinance.replaceAll(sUrlYahooEndingDay, sEndingDay);
 		GetHTML.sFileNameDateFormatYahooFinance = sFileNameDateFormatYahooFinance.replaceAll(sUrlYahooStartingDay, sStartingDay);
@@ -187,13 +193,21 @@ public class GetHTML {
 	}
 	
 	public void createTables() throws Exception {
+		String JdbcConnectString = "jdbc:p6spy:mysql://localhost/feedback?" + "user=sqluser&password=sqluserpw";
+		
 	    try {
 	      // this will load the MySQL driver, each DB has its own driver
-	      Class.forName("com.mysql.jdbc.Driver");
+	    	if (bTraceSqlWithP6Spy) {
+	    		Class.forName(ClassNameP6SpyJdbcMySQL);
+	    	}
+	    	else{
+	    		Class.forName(ClassNameJdbcMySQL);
+	    		JdbcConnectString = JdbcConnectString.replace("p6spy:", "");
+	    	}
 	      // setup the connection with the DB.
-	      connect = DriverManager.getConnection("jdbc:mysql://localhost/feedback?" + "user=sqluser&password=sqluserpw"); //"user=root&password=12many");
-	      
-	      preparedStatement = connect.prepareStatement("CREATE TABLE HistoricalStockPrice (MarketDate Date not null, OpenPrice DECIMAL(18,4), HighPrice DECIMAL(18,4), Low DECIMAL(18,4), Close DECIMAL(18,4), Volume	BIGINT, AdjClose DECIMAL(18,4), Symbol varchar(5))");
+	    	
+	      connect = DriverManager.getConnection(JdbcConnectString); //"user=root&password=12many");	      
+	      preparedStatement = connect.prepareStatement("CREATE TABLE HistoricalStockPrice2 (MarketDate Date not null, OpenPrice DECIMAL(18,4), HighPrice DECIMAL(18,4), Low DECIMAL(18,4), Close DECIMAL(18,4), Volume	BIGINT, AdjClose DECIMAL(18,4), Symbol varchar(5))");
 	      preparedStatement.executeUpdate();
 
 	      
@@ -211,13 +225,22 @@ public class GetHTML {
 
 	public void writeDbInsertHistoricalStockPrice(String sInsertValues) throws Exception {
 		
+		String JdbcConnectString = "jdbc:p6spy:mysql://localhost/feedback?" + "user=sqluser&password=sqluserpw";		
 		String sSqlStatement = "";
 		
 		try {
 	      // this will load the MySQL driver, each DB has its own driver
-	      Class.forName("com.mysql.jdbc.Driver");
+	      //Class.forName("com.mysql.jdbc.Driver");
+	      //Class.forName("com.p6spy.engine.spy.P6SpyDriver");
+	    	if (bTraceSqlWithP6Spy) {
+	    		Class.forName(ClassNameP6SpyJdbcMySQL);
+	    	}
+	    	else{
+	    		Class.forName(ClassNameJdbcMySQL);
+	    		JdbcConnectString = JdbcConnectString.replace("p6spy:", "");
+	    	}
 	      // setup the connection with the DB.
-	      connect = DriverManager.getConnection("jdbc:mysql://localhost/feedback?" + "user=sqluser&password=sqluserpw"); //"user=root&password=12many");
+	      connect = DriverManager.getConnection(JdbcConnectString); //"user=root&password=12many");
 	      sSqlStatement =  "INSERT INTO HistoricalStockPrice ";
 	      sSqlStatement += " (MarketDate, OpenPrice, HighPrice, Low, Close, Volume, AdjClose, Symbol) ";
 	      sSqlStatement += " VALUES ";
@@ -239,12 +262,14 @@ public class GetHTML {
 
 	  }	
 	
-		  // you need to close all three to make sure
-		  private void close() {
-		    close(resultSet);
-		    close(statement);
-		    close(connect);
-		  }
+		// you need to close all three to make sure
+		private void close() {
+			
+			close(resultSet);
+			close(statement);
+			close(connect);
+
+		}
 		  
 		  private void close(ResultSet c) {
 		    try {
@@ -368,11 +393,12 @@ public class GetHTML {
 
 			if ((bOutputDB) && (sLocalURL.contains(sUrlYahooFinanceHistorical)) )
 			{
+				StockSymbol = getStockSymbol(sLocalURL);
 				log.debug("Begin out->DB ");
 				try {
 					String sOneLineInserts = sHTTpResponseLines;
 					sOneLineInserts = sOneLineInserts.replaceAll(sUrlYahooHistoricalHeader, "");
-					sOneLineInserts = sOneLineInserts + ",INTC";
+					sOneLineInserts = sOneLineInserts + "," + StockSymbol;
 					//1/0
 					sOneLineInserts = sOneLineInserts.replaceAll("\n", "' , '");
 					sOneLineInserts = sOneLineInserts.replaceAll("\r", "' , '");
@@ -387,6 +413,22 @@ public class GetHTML {
 			}
 		}
 				
+	}
+
+	private String getStockSymbol(String sURLwithStockSymbol) {
+		// TODO Auto-generated method stub
+		//http://download.finance.yahoo.com/d/quotes.txt?s=AIG&f=n&e=.csv"
+		String Stock = "";
+		String QueryStringStartingStockSymbol = "s=";
+		
+		if (sURLwithStockSymbol.toLowerCase().contains(QueryStringStartingStockSymbol.toLowerCase())) {
+			Integer BeginStock = sURLwithStockSymbol.toLowerCase().indexOf(QueryStringStartingStockSymbol);
+		
+			String QueryStringEndingStockSymbol = "&";
+			Integer EndStock = sURLwithStockSymbol.toLowerCase().indexOf(QueryStringEndingStockSymbol);
+			Stock = sURLwithStockSymbol.substring(BeginStock+QueryStringStartingStockSymbol.length(), EndStock);
+		}
+		return Stock;
 	}
 
 	private static boolean validURL(String sCommandLineParameter) {
@@ -495,9 +537,28 @@ public class GetHTML {
 			}
 			log.info("Time: Ending  getHTML (main) Ending   " + sCommandLineParameter);
 		}
-		String sLocalUrlYahooFinanceIntelHistoricalGeneric = setsFileNameDateFormatYahooFinance(sUrlYahooFinanceIntelHistoricalGeneric,"INTC","31","09","2014");
+		
+		Calendar TodaysDate = Calendar.getInstance();
+		
+		Calendar cal = Calendar.getInstance();  
+		Integer iYear = cal.get(cal.YEAR);  
+		Integer iMonth = cal.get(cal.MONTH); //zero-based  
+		Integer iDay = cal.get(cal.DAY_OF_MONTH); 
+		
+		String sYear = iYear.toString();
+		String sMonth = iMonth.toString();
+		String sDay = iDay.toString();
+		
+		StockSymbol = "INTC";
+		String sLocalUrlYahooFinanceIntelHistoricalGeneric = setsFileNameDateFormatYahooFinance(sUrlYahooFinanceHistoricalGeneric, StockSymbol, sMonth, sDay, sYear );
 		log.info("sLocalUrlYahooFinanceIntelHistoricalGeneric=" + sLocalUrlYahooFinanceIntelHistoricalGeneric);
 		getHtmlgetPage.getHTML("-U=" + sLocalUrlYahooFinanceIntelHistoricalGeneric);
+		
+		StockSymbol = "AIG";
+		sLocalUrlYahooFinanceIntelHistoricalGeneric = setsFileNameDateFormatYahooFinance(sUrlYahooFinanceHistoricalGeneric, StockSymbol, sMonth, sDay, sYear );
+		log.info("sLocalUrlYahooFinanceIntelHistoricalGeneric=" + sLocalUrlYahooFinanceIntelHistoricalGeneric);
+		getHtmlgetPage.getHTML("-U=" + sLocalUrlYahooFinanceIntelHistoricalGeneric);
+
 
 		log.info("Time: Ending   (main)" );
 	} // main end
