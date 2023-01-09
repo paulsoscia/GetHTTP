@@ -1,0 +1,189 @@
+# Setup Developer Machine
+## Install Docker
+Install Docker => https://docs.docker.com/install/linux/docker-ce/ubuntu/
+​
+1. Uninstall old versions
+    ```
+    sudo apt-get remove docker docker-engine docker.io
+    ```
+​
+2. Install Dependencies
+    ```
+    sudo apt-get update && \`
+    sudo apt-get install \
+      apt-transport-https \
+      ca-certificates \
+      curl \
+      software-properties-common -y
+    ```
+3. Install
+    ```
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - && \
+    sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" && \
+    sudo apt-get update && \
+    sudo apt-get install docker-ce -y
+    ```
+4. Add current user to the `docker` group.
+    ```
+    sudo usermod -aG docker $USER
+    ```
+5. Increase Max Number Of Files That Can Be Monitored
+    ```
+    echo fs.inotify.max_user_watches=582222 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+    ```
+6. Restart computer.
+​
+## Install Docker Compose
+Install Docker Compose => https://docs.docker.com/compose/install/
+```
+sudo curl -L https://github.com/docker/compose/releases/download/1.21.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose && \
+sudo chmod +x /usr/local/bin/docker-compose && \
+docker-compose --version
+```
+​
+## Setup Developer Environment
+### Git Config
+Update your Git configuration with your name and Penn River e-mail on your host machaine:
+```
+git config --global user.name "Your Name"
+git config --global user.email "your.name@pennriver.com"
+```
+​
+Make sure you have already cloned the core git repo.  If not, do the following:
+```
+git clone https://github.com/pennriver/core.git
+```
+​
+### Secrets File
+First thing you will do is create a file named `secrets.json` in this directory (core/docker/developer). You will
+set your Github credentials here and AWS credentials if you want to use the command line tool.
+​
+The file format look like the following:
+```
+{
+  "github": {
+    "user": "GITHUB_USER",
+    "pass": "GITHUB_PASS"
+  },
+  "aws": {
+    "id": "AWS_ID",
+    "secret": "AWS_PASS"
+  }
+}
+```
+​
+### Start Developer Environment
+You can now start your development environment with the following command:
+```
+./lin
+```
+​
+It will take a few minutes to build the first time you run it.
+​
+### Open Remote Desktop Session
+Open your Remote Desktop client. On Ubuntu, it's a program called `Remmina`
+​
+If you do not already have Remmina installed, do the following:
+```
+sudo apt-add-repository ppa:remmina-ppa-team/remmina-next
+sudo apt update
+sudo apt install remmina remmina-plugin-rdp remmina-plugin-secret
+```
+​
+You will connect to the developer environment using the `localhost` and credentials `ubuntu` / `ubuntu`
+​
+### Setup Eclipse
+The first thing you will want to do after logging into the Developer desktop is setup Eclipse. You
+can find Eclipse in the top left menu of the desktop by searching for `Eclipse` from the menu.
+​
+#### Eclipse Preferences
+1. Open Eclipse Preferences
+2. `Java/Code Style/Formatter` -> Import `Code Style` from `core/documentation/ProductHub/Eclipse` folder
+3. `Java/Code Style/Clean Up` -> Import `Clean Up` from `core/documentation/ProductHub/Eclipse` folder
+4. `Java/Appearance/Members Sort` -> and check `Sort members in same category by visibility`
+4. `Validation` -> `Disable All` and check `Suspend All validators`
+5. `Maven/Installations` -> Add installed maven from docker image : `/usr/maven`, name: `Maven 3.6.3` -> Check the new maven installation
+9. `XML/XML Files/Editor` -> Line Width: `999`, uncheck `Join Lines`, check `indent using spaces` and set the `space size` to `4`
+10. `Web/HTML Files/Editor` -> Line Width: `160`, check `indent using spaces` and set the `space size` to `4`
+11. `General/Editors/File Associations` -> Select `*.class`. Make `JD Class File Viewer` the default editor.
+12. `General/Editors/File Associations` -> Select `*.class without source`. Make `JD Class File Viewer` the default editor.
+11. `General/Editors/File Associations` -> Add `*.plan` as a File Type. Make `Xml Editor` as the default editor for that file type.
+12. `General/Content Types` -> Select `XML (Illformed)` from the Content Types. Add `*.plan` to the File Associations list.
+​
+#### Import Projects
+1. Add local Git repository
+2. Import Projects (Unselect `core`, `core/api`, and any project that doesn't say `Eclipse Project`)
+2. Maven Update all projects immediately after importing
+3. Refresh all projects
+4. Clean all
+5. Refresh all projects
+6. Refresh all projects
+8. All compile errors should be gone by now
+​
+#### Start API
+1. Right Click: `yaas-boot` -> `src/main/java` -> `com.yaas.boot.Runner` : `Run As` -> `Java Application`
+    A list of possible internal clients will be printed. Copy the deployment instructions you want to run
+2. Open the `Run Configurations`
+3. Clone the `Runner` configuration you just created
+4. Paste the instructions into the `Program Arguments` input
+5. After the application has started, open the `Chrome` browser
+6. Navigate to `http://eclipse:8080`
+​
+### Start Web
+The web project can be started through the command line.
+1. Open a new terminal shell.
+2. Run the command `node`
+3. After the application has started, open the `Chrome` browser
+4. Navigate to `http://node:3000`
+​
+# Profiling API
+1. Open the Profiling Application `VisualVM`
+2. Double click the API Java Process
+3. Select the `Sampler` tab
+4. Click the `Settings` checkbox
+5. Past the following into the `Do not profile packages`
+    ```
+    java.*, javax.*,
+    sun.*, sunw.*, com.sun.*,
+    com.yaas.commons.api.distributed.*,
+    org.eclipse.*,
+    org.jgroups.*,
+    EDU.oswego.cs.dl.util.concurrent.*
+    ```
+6. Click the `CPU` button to start profiling session
+​
+# FAQ
+## I cannot delete or a remove a project from my Eclipse
+https://stackoverflow.com/questions/24395864/how-to-delete-non-exist-project-from-eclipse
+https://stackoverflow.com/questions/9045609/eclipse-fully-remove-an-old-project
+1. Shut down Eclipse
+2. Open <workspace>/.metadata/.plugins/org.eclipse.ui.workbench/workingsets.xml
+3. Remove the project from <workspace>/.metadata/.plugins/org.eclipse.core.resources/.projects
+3. Find the faulty tag and remove it
+4. Start Eclipse
+​
+## The JPA Project keeps showing up in my Eclipse progress
+https://stackoverflow.com/questions/7359800/how-do-i-stop-jpa-facet-on-eclipse-from-updating-all-the-time
+https://stackoverflow.com/questions/19649847/eclipse-jpa-project-change-event-handler-waiting
+​
+## Permissions Denied On Volume
+https://denibertovic.com/posts/handling-permissions-with-docker-volumes/
+​
+## How Do I Copy Files To My Host Machine
+1. Open `File Manager` in your host machine
+2. Enter the location: `sftp://ubuntu@localhost:2222`
+3. Enter the password `ubuntu`
+​
+## How Do I add a new Eclipse Plugin
+1. SSH to the Eclipse container
+    ```
+    eclipse2 ssh
+    ```
+2. Mirror the Update site of the plugin
+    ```
+    mirror update-site --name neon --url http://download.eclipse.org/releases/neon
+    ```
+3. Synchronize the Update site with S3
+    1. Open the `EclipseUpdateSitesTest` file
+    2. Run the `SyncAll` test to synchronize all of your mirrored update sites with S3
+4. Add the plugin command to the Eclipse Dockerfile (using the S3 URL)  
